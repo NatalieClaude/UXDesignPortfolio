@@ -1,0 +1,72 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Styling */
+.case-study-header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.case-study-header h1 {
+  font-size: 36px;
+  color: #605dec;
+}
+
+.case-study-header p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Section Styling (Minimalistic) */
+.case-study-section {
+  padding: 40px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.case-study-section h2 {
+  font-size: 28px;
+  color: #605dec;
+  margin-bottom: 20px;
+}
+
+.case-study-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.case-study-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #605dec;
+  color: white;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+}
