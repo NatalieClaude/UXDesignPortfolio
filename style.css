@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Open Sans", sans-serif; /* Apply the Open Sans font */
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
@@ -40,11 +40,11 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 header nav ul li a:hover {
-  color: #6a1b9a; /* Purple hover effect */
+  color: #605dec; /* Purple hover effect */
 }
 
 /* Main Section Styling */
@@ -70,6 +70,7 @@ header nav ul li a:hover {
   height: 250px;
   border-radius: 50%; /* Make the image circular */
   object-fit: cover;
+  object-position: center top; /* Shift the image down within the circle */
   margin-right: 40px; /* Space between image and text */
 }
 
@@ -88,7 +89,7 @@ header nav ul li a:hover {
 
 .text .highlight {
   font-size: 20px;
-  color: #6a1b9a; /* Purple highlight for subtext */
+  color: #605dec; /* Purple highlight for subtext */
 }
 
 /* Work Section Styling */
@@ -99,7 +100,7 @@ header nav ul li a:hover {
 
 .work h2 {
   font-size: 28px;
-  color: #6a1b9a;
+  color: #000000;
   margin-bottom: 30px;
 }
 
@@ -109,16 +110,53 @@ header nav ul li a:hover {
   gap: 50px;
 }
 
+/* Work Item Styling */
 .work-item {
-  width: 500px;
+  position: relative;
+  width: 400px;
   height: 300px;
+  overflow: hidden; /* Ensure the content stays within the bounds */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
 }
 
+/* Work Item Styling */
+.work-item {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden; /* Ensure the content stays within the bounds */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+/* Scale the entire work-item on hover */
+.work-item:hover {
+  transform: scale(
+    1.1
+  ); /* Slightly increase the size of the entire work-item */
+}
+
+/* Image Styling */
 .work-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Add a semi-transparent black overlay */
+.work-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Initially no black overlay */
+  transition: background-color 0.3s ease; /* Smooth transition for the overlay */
+}
+
+/* On hover, the overlay becomes semi-transparent */
+.work-item:hover::before {
+  background-color: rgba(0, 0, 0, 0.4); /* 40% black overlay */
 }
 
 /* Footer Styling */
