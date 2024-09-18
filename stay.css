@@ -5,12 +5,39 @@
   box-sizing: border-box;
 }
 
+/* Global Body Styling */
 body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
-  background-color: #f9f4f4;
+  background-color: #ffffff; /* Updated to white background */
   color: #333;
   padding: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+  color: #000; /* Black color for bold text */
+}
+
+/* Global Container to Center and Align Content */
+.container {
+  max-width: 900px; /* Ensures content width doesn't exceed 900px */
+  margin: 0 auto; /* Centers content horizontally */
+  padding: 0 20px; /* Adds some padding to the sides for breathing room */
+  box-sizing: border-box;
+}
+
+/* Global Image Styling (For All Images) */
+img {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  height: auto;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: cover;
+  /* border-radius: 0px; */
+  margin-bottom: 20px;
 }
 
 /* Header Styling */
@@ -51,9 +78,9 @@ body {
 }
 
 .case-study-section img {
-  width: 100%;
+  width: 90%;
   height: auto;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   margin: 20px 0;
 }
 
