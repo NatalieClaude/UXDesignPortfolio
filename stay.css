@@ -14,14 +14,9 @@ body {
   padding: 20px;
 }
 
-.bold-text {
-  font-weight: bold;
-  color: #000; /* Black color for bold text */
-}
-
 /* Global Container to Center and Align Content */
 .container {
-  max-width: 900px; /* Ensures content width doesn't exceed 900px */
+  max-width: 1200px; /* Increase to allow wider content */
   margin: 0 auto; /* Centers content horizontally */
   padding: 0 20px; /* Adds some padding to the sides for breathing room */
   box-sizing: border-box;
@@ -31,16 +26,26 @@ body {
 img {
   display: block;
   margin: 20px auto;
-  width: 80%;
+  width: 100%; /* Allow images to scale according to the container */
   height: auto;
-  max-width: 600px;
-  max-height: 400px;
+  max-width: 600px; /* Restrict to prevent oversized images */
   object-fit: cover;
-  /* border-radius: 0px; */
-  margin-bottom: 20px;
 }
 
-/* Header Styling */
+/* Flexbox layout for images side by side in the research section */
+.image-row {
+  display: flex;
+  justify-content: center; /* Center the images as a group */
+  gap: 20px; /* Adds space between the images */
+}
+
+.image-row img {
+  width: 45%; /* Allow images to scale based on available container size */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures images fit within their containers */
+}
+
+/* Case Study Header */
 .case-study-header {
   text-align: center;
   padding: 40px 20px;
@@ -57,10 +62,10 @@ img {
   margin-top: 10px;
 }
 
-/* Section Styling (Minimalistic) */
+/* Section Styling */
 .case-study-section {
   padding: 40px 0;
-  max-width: 900px;
+  max-width: 1200px; /* Matches the new container size */
   margin: 0 auto;
 }
 
@@ -75,13 +80,6 @@ img {
   color: #555;
   line-height: 1.8;
   margin-bottom: 20px;
-}
-
-.case-study-section img {
-  width: 90%;
-  height: auto;
-  /* border-radius: 8px; */
-  margin: 20px 0;
 }
 
 /* Footer Styling */
