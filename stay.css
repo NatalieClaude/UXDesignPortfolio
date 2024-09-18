@@ -16,9 +16,10 @@ body {
 
 /* Global Container to Center and Align Content */
 .container {
-  max-width: 1200px; /* Increase to allow wider content */
+  width: 90vw; /* Use 90% of the viewport width for more dynamic scaling */
+  max-width: 1000px; /* Set a max limit so it doesn’t get too wide on large screens */
   margin: 0 auto; /* Centers content horizontally */
-  padding: 0 20px; /* Adds some padding to the sides for breathing room */
+  padding: 0 20px; /* Adds padding for breathing room */
   box-sizing: border-box;
 }
 
@@ -26,23 +27,32 @@ body {
 img {
   display: block;
   margin: 20px auto;
-  width: 100%; /* Allow images to scale according to the container */
+  width: auto; /* Default to auto unless overridden */
   height: auto;
   max-width: 600px; /* Restrict to prevent oversized images */
   object-fit: cover;
 }
 
+/* Full-width images */
+.full-width {
+  width: 100%; /* Make specific images take up the entire container width */
+  max-width: 100%; /* Ensure they don’t exceed the container’s width */
+}
+
 /* Flexbox layout for images side by side in the research section */
 .image-row {
   display: flex;
-  justify-content: center; /* Center the images as a group */
-  gap: 20px; /* Adds space between the images */
+  justify-content: space-between; /* Space between the images */
+  gap: 20px; /* Gap between images */
 }
 
 .image-row img {
-  width: 45%; /* Allow images to scale based on available container size */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensures images fit within their containers */
+  flex-grow: 1; /* Images grow to fill available space equally */
+  max-width: calc(
+    (100% - 20px) / 2
+  ); /* Each image takes up half of the container with gap considered */
+  height: auto;
+  object-fit: contain;
 }
 
 /* Case Study Header */
