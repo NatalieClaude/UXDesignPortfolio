@@ -35,11 +35,19 @@ h6 {
 /* Global Image Styling (For All Images) */
 img {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto; /* This applies margin on top and bottom, centers the image horizontally */
   width: auto; /* Default to auto unless overridden */
   height: auto;
   max-width: 600px; /* Restrict to prevent oversized images */
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image is resized appropriately */
+  margin-top: 20px; /* Adds space above the image */
+  margin-bottom: 20px; /* Adds space below the image */
+}
+
+/* Global Paragraph Styling (To Ensure Consistent Spacing) */
+p {
+  margin-bottom: 20px; /* Add space below every paragraph */
+  line-height: 1.8; /* Ensure good readability */
 }
 
 /* Full-width images */
