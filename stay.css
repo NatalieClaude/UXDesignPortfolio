@@ -39,6 +39,10 @@ img {
   margin-bottom: 20px; /* Adds space below the image */
 }
 
+h3 {
+  color: #605dec; /* Replace with any color code you want */
+}
+
 /* Global Paragraph Styling (To Ensure Consistent Spacing) */
 p {
   margin-bottom: 20px; /* Add space below every paragraph */
