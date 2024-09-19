@@ -23,6 +23,15 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 20px; /* Adjust this value to control the space below all headings */
+}
+
 /* Global Image Styling (For All Images) */
 img {
   display: block;
@@ -37,6 +46,10 @@ img {
 .full-width {
   width: 100%; /* Make specific images take up the entire container width */
   max-width: 100%; /* Ensure they don’t exceed the container’s width */
+}
+
+.smaller-image {
+  width: 50%;
 }
 
 /* Flexbox layout for images side by side in the research section */
