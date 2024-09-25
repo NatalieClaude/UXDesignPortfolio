@@ -5,134 +5,148 @@
   box-sizing: border-box;
 }
 
-/* Global Body Styling */
+/* Body Styling */
 body {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff; /* Updated to white background */
+  background-color: #ffffff;
   color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styling */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Global Container to Center and Align Content */
-.container {
-  width: 90vw; /* Use 90% of the viewport width for more dynamic scaling */
-  max-width: 1000px; /* Set a max limit so it doesn’t get too wide on large screens */
-  margin: 0 auto; /* Centers content horizontally */
-  padding: 0 20px; /* Adds padding for breathing room */
-  box-sizing: border-box;
-}
-
-.h-spacing {
-  margin-top: 40px; /* Example: Add more space above the heading */
-}
-
-/* Global Image Styling (For All Images) */
-img {
-  display: block;
-  margin: 20px auto; /* This applies margin on top and bottom, centers the image horizontally */
-  width: auto; /* Default to auto unless overridden */
-  height: auto;
-  max-width: 600px; /* Restrict to prevent oversized images */
-  object-fit: cover; /* Ensures the image is resized appropriately */
-  margin-top: 20px; /* Adds space above the image */
-  margin-bottom: 20px; /* Adds space below the image */
-}
-
-h3 {
-  color: #605dec; /* Replace with any color code you want */
-}
-
-/* Global Paragraph Styling (To Ensure Consistent Spacing) */
-p {
-  margin-bottom: 20px; /* Add space below every paragraph */
-  line-height: 1.8; /* Ensure good readability */
-  margin-top: 20px;
-}
-
-/* Ensure consistent font, size, and spacing for lists and paragraphs */
-ul,
-ol,
-li {
-  font-family: "Open Sans", sans-serif; /* Match the paragraph font */
-  font-size: 16px;
-  color: #555; /* Match the paragraph color */
-  margin-bottom: 10px; /* Adds 10px space between each bullet point */
-}
-
-/* Adjust the padding for lists to control indentation */
-ul,
-ol {
-  padding-left: 60px; /* Adjust to control bullet point indentation */
-  padding-right: 60px;
-}
-
-.bold-text {
-  font-weight: bold;
-  color: black;
-}
-
-/* Full-width images */
-.full-width {
-  width: 100%; /* Make specific images take up the entire container width */
-  max-width: 100%; /* Ensure they don’t exceed the container’s width */
-}
-
-.smaller-image {
-  width: 50%;
-}
-
-/* Flexbox layout for images side by side in the research section */
-.image-row {
-  display: flex;
-  justify-content: space-between; /* Space between the images */
-  gap: 20px; /* Gap between images */
-}
-
-.image-row img {
-  flex-grow: 1; /* Images grow to fill available space equally */
-  max-width: calc(
-    (100% - 20px) / 2
-  ); /* Each image takes up half of the container with gap considered */
-  height: auto;
-  object-fit: contain;
-}
-
-/* Case Study Header */
+/* Header Styling */
 .case-study-header {
   text-align: center;
   padding: 40px 20px;
+  background-color: #f7f7f7;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .case-study-header h1 {
   font-size: 36px;
   color: #605dec;
+  margin-bottom: 20px;
 }
 
-.case-study-header p {
-  font-size: 18px;
+.case-study-header h2 {
+  font-size: 24px;
   color: #666;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* Section Styling */
 .case-study-section {
-  padding: 40px 0;
-  max-width: 1200px; /* Matches the new container size */
+  padding: 40px 20px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .case-study-section h2 {
   font-size: 28px;
   color: #605dec;
+  margin-top: 40px;
   margin-bottom: 20px;
+}
+
+.case-study-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .case-study-section p {
   font-size: 18px;
   color: #555;
   line-height: 1.8;
+  margin-top: 10px;
   margin-bottom: 20px;
+}
+
+/* Image Styling */
+.case-study-section img {
+  display: block;
+  margin: 20px auto;
+  width: 100%; /* Make images responsive */
+  max-width: 800px; /* Limit maximum width */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styling */
+ul,
+ol {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Flexbox Layouts for Alternating Sections */
+.text-and-image,
+.alternating-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.alternating-section.reverse-layout {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+}
+
+.split-content {
+  display: flex;
+  gap: 20px;
+}
+
+.split-content .text {
+  flex: 1.5;
+}
+
+.split-content .image {
+  flex: 1;
+}
+
+/* Design Solutions Section */
+.design-section {
+  background-color: #fafafa;
+  padding: 40px;
+}
+
+.design-solutions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.solution img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer Styling */
@@ -145,6 +159,102 @@ footer {
   margin-top: 40px;
 }
 
-footer p {
-  margin: 0;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  /* Reducing font size for tablets */
+  .case-study-header h1 {
+    font-size: 32px;
+  }
+
+  .case-study-header h2 {
+    font-size: 20px;
+  }
+
+  .case-study-section h2 {
+    font-size: 24px;
+  }
+
+  .case-study-section h3 {
+    font-size: 20px;
+  }
+
+  .case-study-section p {
+    font-size: 16px;
+  }
+
+  /* Limit the image max-width */
+  .case-study-section img {
+    max-width: 600px; /* Smaller max-width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout to stack vertically */
+  .text-and-image,
+  .alternating-section,
+  .split-content {
+    flex-direction: column;
+  }
+
+  .image,
+  .text {
+    width: 100%;
+  }
+
+  .case-study-header {
+    padding: 20px;
+  }
+
+  .case-study-header h1 {
+    font-size: 28px;
+  }
+
+  .case-study-header h2 {
+    font-size: 18px;
+  }
+
+  .case-study-section {
+    padding: 20px 10px;
+  }
+
+  .case-study-section h2 {
+    font-size: 22px;
+  }
+
+  .case-study-section p {
+    font-size: 16px;
+  }
+
+  /* Adjust the image max-width for smaller screens */
+  .case-study-section img {
+    max-width: 100%; /* Allow image to adapt to smaller container */
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-header h1 {
+    font-size: 24px;
+  }
+
+  .case-study-header h2 {
+    font-size: 16px;
+  }
+
+  .case-study-section h2 {
+    font-size: 20px;
+  }
+
+  .case-study-section p {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Further reduce image size for mobile screens */
+  .case-study-section img {
+    max-width: 100%; /* Ensures image never exceeds the container */
+  }
 }
