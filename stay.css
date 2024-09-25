@@ -24,7 +24,9 @@ body {
 }
 
 .h-spacing {
-  margin-top: var(--space-large); /* Adds large spacing above elements with this class */
+  margin-top: var(
+    --space-large
+  ); /* Adds large spacing above elements with this class */
 }
 
 /* Image Styling: Applies to all images for consistent sizing and spacing */
@@ -49,32 +51,56 @@ p {
 /* Image and Paragraph Combination: Controls spacing between images and paragraphs */
 img + p,
 p + img {
-  margin-top: var(--space-small); /* Adds consistent spacing between images and paragraphs */
+  margin-top: var(
+    --space-small
+  ); /* Adds consistent spacing between images and paragraphs */
 }
 
 /* Headings followed or preceded by images: Consistent spacing for images next to headings */
-h2 + img, h3 + img, h4 + img,
-img + h2, img + h3, img + h4 {
-  margin-top: var(--space-medium); /* Medium spacing between headings and images */
+h2 + img,
+h3 + img,
+h4 + img,
+img + h2,
+img + h3,
+img + h4 {
+  margin-top: var(
+    --space-medium
+  ); /* Medium spacing between headings and images */
 }
 
 /* Headings followed or preceded by paragraphs: Adds consistent spacing */
-h2 + p, h3 + p, h4 + p,
-p + h2, p + h3, p + h4 {
-  margin-top: var(--space-medium); /* Medium spacing between headings and paragraphs */
+h2 + p,
+h3 + p,
+h4 + p,
+p + h2,
+p + h3,
+p + h4 {
+  margin-top: var(
+    --space-medium
+  ); /* Medium spacing between headings and paragraphs */
 }
 
 /* Spacing between different levels of headings */
 h2 + h3,
 h3 + h2 {
-  margin-top: var(--space-medium); /* Medium spacing between different heading levels */
+  margin-top: var(
+    --space-medium
+  ); /* Medium spacing between different heading levels */
 }
 
 /* Headings followed or preceded by lists: Consistent spacing between lists and headings */
-h2 + ul, h3 + ul, h4 + ul,
-ul + h2, ul + h3, ul + h4,
-h2 + ol, h3 + ol, h4 + ol,
-ol + h2, ol + h3, ol + h4 {
+h2 + ul,
+h3 + ul,
+h4 + ul,
+ul + h2,
+ul + h3,
+ul + h4,
+h2 + ol,
+h3 + ol,
+h4 + ol,
+ol + h2,
+ol + h3,
+ol + h4 {
   margin-top: var(--space-medium); /* Medium spacing for headings and lists */
 }
 
@@ -98,7 +124,9 @@ ol + h2, ol + h3, ol + h4 {
 
 .image-row img {
   flex-grow: 1; /* Allows images to grow to fill available space */
-  max-width: calc((100% - var(--space-small)) / 2); /* Ensures images take half the container width with spacing considered */
+  max-width: calc(
+    (100% - var(--space-small)) / 2
+  ); /* Ensures images take half the container width with spacing considered */
   height: auto;
   object-fit: contain; /* Ensures images fit within their containers */
 }
@@ -131,7 +159,7 @@ ol + h2, ol + h3, ol + h4 {
 h2 {
   color: #605dec; /* Keep the consistent color */
   font-weight: bold; /* Maintain boldness */
-  margin-top: var(--space-large); /* Maintain large spacing */
+  margin-top: var(--space-micro); /* Maintain large spacing */
   border-bottom: 2px solid #605dec; /* Add a thicker underline for emphasis */
   padding-bottom: 6px; /* Space between text and underline */
   margin-bottom: var(--space-medium); /* Maintain spacing below */
@@ -139,14 +167,56 @@ h2 {
 
 /* Differentiating h3 headings */
 h3 {
-  color: #333; /* Use a darker shade to contrast with h2 */
+  color: #605dec; /* Use a darker shade to contrast with h2 */
   font-weight: bold; /* Keep it bold */
   margin-top: var(--space-medium); /* Adjust spacing */
   padding-bottom: 2px; /* Optional: Space below without an underline */
 }
 
 /* Styling for bold headings within bullet points */
-ul li span.bold-text, ol li span.bold-text {
+ul li span.bold-text,
+ol li span.bold-text {
   font-size: 16px; /* Make bullet point headings smaller than paragraph text */
-  color
+  color: #333; /* Slightly darker color */
+  font-weight: bold; /* Keeps them bold */
+}
+
+/* List Styling: Ensure list items match paragraph styling */
+ul,
+ol {
+  font-family: "Open Sans", sans-serif; /* Matches paragraph font */
+  font-size: 16px; /* Smaller font size for bullet points */
+  color: #555; /* Matches paragraph color */
+  margin-top: var(--space-small); /* Spacing above the list */
+  margin-bottom: var(--space-small); /* Spacing below the list */
+  padding-left: 40px; /* Indents the list for clearer hierarchy */
+}
+
+/* Styling list items */
+ul li,
+ol li {
+  margin-bottom: var(--space-small); /* Adds space between list items */
+}
+
+/* Footer Styling */
+footer {
+  text-align: center; /* Centers footer text */
+  padding: var(--space-small); /* Adds padding inside footer */
+  background-color: #605dec; /* Footer background color */
+  color: white; /* Text color */
+  font-size: 14px; /* Smaller font size for footer text */
+  margin-top: var(--space-large); /* Adds large space above the footer */
+}
+
+footer p {
+  margin: 0; /* Resets margin for footer paragraphs */
+}
+
+/* New Consistent Spacing Rules: Variables for controlling spacing throughout */
+:root {
+  --space-large: 40px; /* Large spacing for major breaks, e.g., between sections */
+  --space-medium: 30px; /* Medium spacing for related elements, e.g., headings to paragraphs */
+  --space-small: 20px; /* Small spacing for closely related elements, e.g., images and paragraphs */
+  --space-micro: 10px;
+  --space-nano: 5px;
 }
