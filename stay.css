@@ -1,150 +1,152 @@
-/* Basic Reset */
+/* Basic Reset: Removes default padding and margins from all elements for consistency */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Body Styling */
+/* Global Body Styling: Sets basic styling for the entire page */
 body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff; /* Updated to white background */
-  color: #333;
-  padding: 20px;
+  font-family: "Open Sans", sans-serif; /* Ensures consistent font across the page */
+  line-height: 1.6; /* Improves readability by adjusting space between lines */
+  background-color: #ffffff; /* Sets a white background for the body */
+  color: #333; /* Dark grey text color for good contrast */
+  padding: 20px; /* Adds padding around the body */
 }
 
-/* Global Container to Center and Align Content */
+/* Container Styling: Centers the main content and limits its width */
 .container {
-  width: 90vw; /* Use 90% of the viewport width for more dynamic scaling */
-  max-width: 1000px; /* Set a max limit so it doesn’t get too wide on large screens */
-  margin: 0 auto; /* Centers content horizontally */
-  padding: 0 20px; /* Adds padding for breathing room */
-  box-sizing: border-box;
+  width: 90vw; /* Uses 90% of the viewport width for responsiveness */
+  max-width: 1000px; /* Limits width on larger screens for readability */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 20px; /* Adds padding inside the container */
+  box-sizing: border-box; /* Ensures padding does not increase element width */
 }
 
 .h-spacing {
-  margin-top: 40px; /* Example: Add more space above the heading */
+  margin-top: var(--space-large); /* Adds large spacing above elements with this class */
 }
 
-/* Global Image Styling (For All Images) */
+/* Image Styling: Applies to all images for consistent sizing and spacing */
 img {
-  display: block;
-  margin: 20px auto; /* This applies margin on top and bottom, centers the image horizontally */
-  width: auto; /* Default to auto unless overridden */
-  height: auto;
-  max-width: 600px; /* Restrict to prevent oversized images */
-  object-fit: cover; /* Ensures the image is resized appropriately */
-  margin-top: 20px; /* Adds space above the image */
-  margin-bottom: 20px; /* Adds space below the image */
+  display: block; /* Makes images block-level for predictable behavior */
+  margin: var(--space-small) auto; /* Centers images and adds vertical spacing */
+  width: auto; /* Keeps image width as original unless overridden */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 600px; /* Prevents images from becoming too large */
+  object-fit: cover; /* Ensures the image covers the container proportionally */
 }
 
-h3 {
-  color: #605dec; /* Replace with any color code you want */
-}
-
-/* Global Paragraph Styling (To Ensure Consistent Spacing) */
+/* Paragraph Styling: Sets consistent styling and spacing for all paragraphs */
 p {
-  margin-bottom: 20px; /* Add space below every paragraph */
-  line-height: 1.8; /* Ensure good readability */
-  margin-top: 20px;
+  margin-top: var(--space-small); /* Adds spacing above each paragraph */
+  margin-bottom: var(--space-small); /* Adds spacing below each paragraph */
+  line-height: 1.8; /* Increases line spacing for readability */
+  font-size: 18px; /* Sets the paragraph font size */
+  color: #555; /* Paragraph color */
 }
 
-/* Ensure consistent font, size, and spacing for lists and paragraphs */
-ul,
-ol,
-li {
-  font-family: "Open Sans", sans-serif; /* Match the paragraph font */
-  font-size: 16px;
-  color: #555; /* Match the paragraph color */
-  margin-bottom: 10px; /* Adds 10px space between each bullet point */
+/* Image and Paragraph Combination: Controls spacing between images and paragraphs */
+img + p,
+p + img {
+  margin-top: var(--space-small); /* Adds consistent spacing between images and paragraphs */
 }
 
-/* Adjust the padding for lists to control indentation */
-ul,
-ol {
-  padding-left: 60px; /* Adjust to control bullet point indentation */
-  padding-right: 60px;
+/* Headings followed or preceded by images: Consistent spacing for images next to headings */
+h2 + img, h3 + img, h4 + img,
+img + h2, img + h3, img + h4 {
+  margin-top: var(--space-medium); /* Medium spacing between headings and images */
 }
 
-.bold-text {
-  font-weight: bold;
-  color: black;
+/* Headings followed or preceded by paragraphs: Adds consistent spacing */
+h2 + p, h3 + p, h4 + p,
+p + h2, p + h3, p + h4 {
+  margin-top: var(--space-medium); /* Medium spacing between headings and paragraphs */
 }
 
-/* Full-width images */
+/* Spacing between different levels of headings */
+h2 + h3,
+h3 + h2 {
+  margin-top: var(--space-medium); /* Medium spacing between different heading levels */
+}
+
+/* Headings followed or preceded by lists: Consistent spacing between lists and headings */
+h2 + ul, h3 + ul, h4 + ul,
+ul + h2, ul + h3, ul + h4,
+h2 + ol, h3 + ol, h4 + ol,
+ol + h2, ol + h3, ol + h4 {
+  margin-top: var(--space-medium); /* Medium spacing for headings and lists */
+}
+
+/* Full-width images for elements needing complete container width */
 .full-width {
-  width: 100%; /* Make specific images take up the entire container width */
-  max-width: 100%; /* Ensure they don’t exceed the container’s width */
+  width: 100%; /* Takes full container width */
+  max-width: 100%; /* Ensures no overflow */
 }
 
+/* Smaller images, e.g., for side-by-side comparisons */
 .smaller-image {
-  width: 50%;
+  width: 50%; /* Reduces image width to half the container */
 }
 
-/* Flexbox layout for images side by side in the research section */
+/* Flexbox layout for side-by-side images, used in research sections */
 .image-row {
-  display: flex;
-  justify-content: space-between; /* Space between the images */
-  gap: 20px; /* Gap between images */
+  display: flex; /* Enables flexible box layout */
+  justify-content: space-between; /* Spaces images evenly */
+  gap: var(--space-small); /* Adds space between images */
 }
 
 .image-row img {
-  flex-grow: 1; /* Images grow to fill available space equally */
-  max-width: calc(
-    (100% - 20px) / 2
-  ); /* Each image takes up half of the container with gap considered */
+  flex-grow: 1; /* Allows images to grow to fill available space */
+  max-width: calc((100% - var(--space-small)) / 2); /* Ensures images take half the container width with spacing considered */
   height: auto;
-  object-fit: contain;
+  object-fit: contain; /* Ensures images fit within their containers */
 }
 
-/* Case Study Header */
+/* Case Study Header: Styling for the main header */
 .case-study-header {
-  text-align: center;
-  padding: 40px 20px;
+  text-align: center; /* Centers the text */
+  padding: var(--space-large) var(--space-small); /* Adds padding around the header */
 }
 
 .case-study-header h1 {
-  font-size: 36px;
-  color: #605dec;
+  font-size: 36px; /* Large font size for emphasis */
+  color: #605dec; /* Sets a distinct color */
 }
 
 .case-study-header p {
-  font-size: 18px;
-  color: #666;
-  margin-top: 10px;
+  font-size: 18px; /* Smaller text for subtitle */
+  color: #666; /* Slightly lighter color */
+  margin-top: var(--space-small); /* Adds small spacing above */
 }
 
-/* Section Styling */
+/* Section Styling: Controls overall styling for sections */
 .case-study-section {
-  padding: 40px 0;
-  max-width: 1200px; /* Matches the new container size */
-  margin: 0 auto;
+  padding: var(--space-large) 0; /* Large spacing at the top and bottom */
+  max-width: 1200px; /* Restricts maximum width */
+  margin: 0 auto; /* Centers the section */
 }
 
-.case-study-section h2 {
-  font-size: 28px;
-  color: #605dec;
-  margin-bottom: 20px;
+/* Differentiating h2 headings */
+h2 {
+  color: #605dec; /* Keep the consistent color */
+  font-weight: bold; /* Maintain boldness */
+  margin-top: var(--space-large); /* Maintain large spacing */
+  border-bottom: 2px solid #605dec; /* Add a thicker underline for emphasis */
+  padding-bottom: 6px; /* Space between text and underline */
+  margin-bottom: var(--space-medium); /* Maintain spacing below */
 }
 
-.case-study-section p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 20px;
+/* Differentiating h3 headings */
+h3 {
+  color: #333; /* Use a darker shade to contrast with h2 */
+  font-weight: bold; /* Keep it bold */
+  margin-top: var(--space-medium); /* Adjust spacing */
+  padding-bottom: 2px; /* Optional: Space below without an underline */
 }
 
-/* Footer Styling */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #605dec;
-  color: white;
-  font-size: 14px;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
+/* Styling for bold headings within bullet points */
+ul li span.bold-text, ol li span.bold-text {
+  font-size: 16px; /* Make bullet point headings smaller than paragraph text */
+  color
 }
