@@ -1,5 +1,8 @@
-
-/* Basic Reset */
+/* 
+  Basic Reset:
+  This applies a global reset to remove default margin, padding, 
+  and sets box-sizing to border-box for all elements and their pseudo-elements 
+*/
 *,
 *::before,
 *::after {
@@ -8,134 +11,189 @@
   box-sizing: border-box;
 }
 
-/* CSS Variables for Colors and Spacing */
+/* 
+  CSS Variables: 
+  These variables define common colors and spacing values for consistency.
+*/
 :root {
-  --primary-color: #605dec;
-  --text-color: #555;
-  --heading-color: #333;
-  --bg-color: #ffffff;
-  --space-large: 40px;
-  --space-medium: 30px;
-  --space-small: 20px;
-  --space-micro: 10px;
+  --primary-color: #605dec; /* Main accent color */
+  --text-color: #555; /* Default text color */
+  --heading-color: #333; /* Main heading text color */
+  --bg-color: #ffffff; /* Background color */
+  --space-large: 40px; /* Large spacing for sections */
+  --space-medium: 30px; /* Medium spacing for related elements */
+  --space-small: 20px; /* Small spacing for close elements */
+  --space-micro: 10px; /* Minimal spacing for micro adjustments */
 }
 
-/* Utility classes for margin and padding */
-.mt-small { margin-top: var(--space-small); }
-.mt-medium { margin-top: var(--space-medium); }
-.mb-small { margin-bottom: var(--space-small); }
-.mb-medium { margin-bottom: var(--space-medium); }
-.p-small { padding: var(--space-small); }
-.p-medium { padding: var(--space-medium); }
-.text-center { text-align: center; }
+/* 
+  Utility classes for margin and padding:
+  These classes allow you to apply consistent spacing without repeating styles.
+*/
+.mt-small {
+  margin-top: var(--space-small);
+}
+.mt-medium {
+  margin-top: var(--space-medium);
+}
+.mb-small {
+  margin-bottom: var(--space-small);
+}
+.mb-medium {
+  margin-bottom: var(--space-medium);
+}
+.p-small {
+  padding: var(--space-small);
+}
+.p-medium {
+  padding: var(--space-medium);
+}
+.text-center {
+  text-align: center;
+}
 
-/* Global Body Styling */
+/* 
+  Global Body Styling:
+  Sets default styles for the entire page
+*/
 body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.6;
-  background-color: var(--bg-color);
-  color: var(--heading-color);
-  padding: 20px;
+  font-family: "Open Sans", sans-serif; /* Applies a clean, modern font */
+  line-height: 1.6; /* Improves text readability */
+  background-color: var(--bg-color); /* Sets a white background */
+  color: var(--heading-color); /* Default text color */
+  padding: 20px; /* Adds padding around the page */
 }
 
-/* Container Styling */
+/* 
+  Container Styling:
+  This centers the main content and limits its width for readability
+*/
 .container {
-  width: 90vw;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 90vw; /* Uses 90% of the viewport width */
+  max-width: 1000px; /* Sets a maximum width for larger screens */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 20px; /* Adds padding to the sides */
 }
 
-/* Image Styling */
+/* 
+  Image Styling:
+  Ensures all images are responsive and fit within their container
+*/
 img {
-  display: block;
-  margin: var(--space-small) auto;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
+  display: block; /* Prevents images from having space below */
+  margin: var(--space-small) auto; /* Centers images with spacing */
+  width: auto; /* Keeps image width as original */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Ensures images don’t overflow their container */
+  object-fit: cover; /* Keeps images proportional */
 }
 
-/* Full-width images */
+/* 
+  Full-width images:
+  Ensures images with this class take the entire width of their container
+*/
 .full-width {
   width: 100%;
   max-width: 100%;
 }
 
-/* Paragraph Styling */
+/* 
+  Paragraph Styling:
+  Sets consistent styling for all paragraphs
+*/
 p {
-  line-height: 1.8;
-  font-size: 18px;
-  color: var(--text-color);
+  line-height: 1.8; /* Increases space between lines for readability */
+  font-size: 18px; /* Sets paragraph font size */
+  color: var(--text-color); /* Applies text color */
 }
 
-/* Headings */
-h2, h3 {
-  color: var(--primary-color);
-  font-weight: bold;
-  margin-bottom: var(--space-small);
-  padding-bottom: 6px;
+/* 
+  Headings (h2 and h3):
+  Styling for main headings, providing consistency across the page
+*/
+h2,
+h3 {
+  color: var(--primary-color); /* Applies primary color */
+  font-weight: bold; /* Makes headings bold */
+  margin-bottom: var(--space-small); /* Adds space below */
+  padding-bottom: 6px; /* Adds padding for separation */
 }
 
 h2 {
-  font-size: 24px;
-  border-bottom: 2px solid var(--primary-color);
+  font-size: 24px; /* Larger font size for h2 */
+  border-bottom: 2px solid var(--primary-color); /* Adds an underline */
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 18px; /* Slightly smaller font size for h3 */
 }
 
-/* Flexbox layout for side-by-side images */
+/* 
+  Flexbox layout for side-by-side images:
+  This class is used for arranging images next to each other
+*/
 .image-row {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-small);
+  display: flex; /* Enables flexible layout */
+  justify-content: space-between; /* Distributes images evenly */
+  gap: var(--space-small); /* Adds space between images */
 }
 
 .image-row img {
-  flex-grow: 1;
-  max-width: calc(50% - var(--space-small));
+  flex-grow: 1; /* Allows images to grow to fill the container */
+  max-width: calc(
+    50% - var(--space-small)
+  ); /* Ensures two images fit side-by-side */
 }
 
-/* Case Study Header */
+/* 
+  Case Study Header:
+  Styles the main header of the case study
+*/
 .case-study-header {
-  text-align: center;
-  padding: var(--space-large) var(--space-small);
+  text-align: center; /* Centers text */
+  padding: var(--space-large) var(--space-small); /* Adds padding */
 }
 
 .case-study-header h1 {
-  font-size: 64px;
-  color: var(--primary-color);
+  font-size: 64px; /* Large font for emphasis */
+  color: var(--primary-color); /* Applies primary color */
 }
 
 .case-study-header p {
-  font-size: 18px;
-  color: #666;
+  font-size: 18px; /* Sets font size */
+  color: #666; /* Slightly lighter color */
 }
 
-/* Section Styling */
+/* 
+  Section Styling:
+  Styles each section of the case study
+*/
 .case-study-section {
-  padding: var(--space-large) 0;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: var(--space-large) 0; /* Adds top and bottom padding */
+  max-width: 1200px; /* Limits maximum width */
+  margin: 0 auto; /* Centers the section */
 }
 
-/* List Styling */
-ul, ol {
-  font-size: 16px;
-  color: var(--text-color);
-  padding-left: 40px;
+/* 
+  List Styling:
+  Applies consistent styles to unordered and ordered lists
+*/
+ul,
+ol {
+  font-size: 16px; /* Slightly smaller font for list items */
+  color: var(--text-color); /* Matches paragraph color */
+  padding-left: 40px; /* Adds left padding for indentation */
 }
 
-/* Footer Styling */
+/* 
+  Footer Styling:
+  Styles the footer of the page
+*/
 footer {
-  text-align: center;
-  padding: var(--space-small);
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 14px;
-  margin-top: var(--space-large);
+  text-align: center; /* Centers text */
+  padding: var(--space-small); /* Adds padding */
+  background-color: var(--primary-color); /* Sets background color */
+  color: white; /* Sets text color */
+  font-size: 14px; /* Smaller font size */
+  margin-top: var(--space-large); /* Adds space above footer */
 }
-
-/* Utility class usage eliminates excessive selectors */
