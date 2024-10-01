@@ -1,0 +1,141 @@
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables for Colors and Spacing */
+:root {
+  --primary-color: #605dec;
+  --text-color: #555;
+  --heading-color: #333;
+  --bg-color: #ffffff;
+  --space-large: 40px;
+  --space-medium: 30px;
+  --space-small: 20px;
+  --space-micro: 10px;
+}
+
+/* Utility classes for margin and padding */
+.mt-small { margin-top: var(--space-small); }
+.mt-medium { margin-top: var(--space-medium); }
+.mb-small { margin-bottom: var(--space-small); }
+.mb-medium { margin-bottom: var(--space-medium); }
+.p-small { padding: var(--space-small); }
+.p-medium { padding: var(--space-medium); }
+.text-center { text-align: center; }
+
+/* Global Body Styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--heading-color);
+  padding: 20px;
+}
+
+/* Container Styling */
+.container {
+  width: 90vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Image Styling */
+img {
+  display: block;
+  margin: var(--space-small) auto;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Full-width images */
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Paragraph Styling */
+p {
+  line-height: 1.8;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+/* Headings */
+h2, h3 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: var(--space-small);
+  padding-bottom: 6px;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Flexbox layout for side-by-side images */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-small);
+}
+
+.image-row img {
+  flex-grow: 1;
+  max-width: calc(50% - var(--space-small));
+}
+
+/* Case Study Header */
+.case-study-header {
+  text-align: center;
+  padding: var(--space-large) var(--space-small);
+}
+
+.case-study-header h1 {
+  font-size: 64px;
+  color: var(--primary-color);
+}
+
+.case-study-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Section Styling */
+.case-study-section {
+  padding: var(--space-large) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* List Styling */
+ul, ol {
+  font-size: 16px;
+  color: var(--text-color);
+  padding-left: 40px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: var(--space-small);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  margin-top: var(--space-large);
+}
+
+/* Utility class usage eliminates excessive selectors */

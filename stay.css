@@ -23,12 +23,6 @@ body {
   box-sizing: border-box; /* Ensures padding does not increase element width */
 }
 
-.h-spacing {
-  margin-top: var(
-    --space-large
-  ); /* Adds large spacing above elements with this class */
-}
-
 /* Image Styling: Applies to all images for consistent sizing and spacing */
 img {
   display: block; /* Makes images block-level for predictable behavior */
@@ -44,7 +38,7 @@ p {
   margin-top: var(--space-small); /* Adds spacing above each paragraph */
   margin-bottom: var(--space-small); /* Adds spacing below each paragraph */
   line-height: 1.8; /* Increases line spacing for readability */
-  font-size: 18px; /* Sets the paragraph font size */
+  font-size: 18px; /* Sets the paragraph font size  */
   color: #555; /* Paragraph color */
 }
 
@@ -138,7 +132,7 @@ ol + h4 {
 }
 
 .case-study-header h1 {
-  font-size: 36px; /* Large font size for emphasis */
+  font-size: 64px; /* Large font size for emphasis */
   color: #605dec; /* Sets a distinct color */
 }
 
@@ -157,6 +151,7 @@ ol + h4 {
 
 /* Differentiating h2 headings */
 h2 {
+  /* font-size: 24px; */
   color: #605dec; /* Keep the consistent color */
   font-weight: bold; /* Maintain boldness */
   margin-top: var(--space-micro); /* Maintain large spacing */
@@ -167,6 +162,7 @@ h2 {
 
 /* Differentiating h3 headings */
 h3 {
+  font-size: 18px;
   color: #605dec; /* Use a darker shade to contrast with h2 */
   font-weight: bold; /* Keep it bold */
   margin-top: var(--space-medium); /* Adjust spacing */
