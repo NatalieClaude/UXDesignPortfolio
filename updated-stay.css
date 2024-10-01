@@ -30,6 +30,8 @@
   Utility classes for margin and padding:
   These classes allow you to apply consistent spacing without repeating styles.
 */
+
+/*This class assigns the variable --space-small, which is 20px */
 .mt-small {
   margin-top: var(--space-small);
 }
@@ -84,7 +86,7 @@ img {
   margin: var(--space-small) auto; /* Centers images with spacing */
   width: auto; /* Keeps image width as original */
   height: auto; /* Maintains aspect ratio */
-  max-width: 100%; /* Ensures images don’t overflow their container */
+  max-width: 50%; /* Ensures images don’t overflow their container */
   object-fit: cover; /* Keeps images proportional */
 }
 
@@ -95,6 +97,16 @@ img {
 .full-width {
   width: 100%;
   max-width: 100%;
+}
+
+.medium-width {
+  width: 80%; /* Makes the image take up 80% of its container */
+  max-width: 100%; /* Ensures it never overflows its container */
+  /* max-height: 400px; Adjust this value to set the maximum height */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures it looks good when resized */
+  border: 3px solid #605dec; /* Adds a 3px solid border with your primary color */
+  padding: 5px; /* Optional: Adds some spacing between the image and the border */
 }
 
 /* 
@@ -108,9 +120,10 @@ p {
 }
 
 /* 
-  Headings (h2 and h3):
+  Headings (h1, h2, h3):
   Styling for main headings, providing consistency across the page
 */
+
 h2,
 h3 {
   color: var(--primary-color); /* Applies primary color */
@@ -120,12 +133,12 @@ h3 {
 }
 
 h2 {
-  font-size: 24px; /* Larger font size for h2 */
+  font-size: 36px; /* Larger font size for h2 */
   border-bottom: 2px solid var(--primary-color); /* Adds an underline */
 }
 
 h3 {
-  font-size: 18px; /* Slightly smaller font size for h3 */
+  font-size: 24px; /* Slightly smaller font size for h3 */
 }
 
 /* 
@@ -155,7 +168,7 @@ h3 {
 }
 
 .case-study-header h1 {
-  font-size: 64px; /* Large font for emphasis */
+  font-size: 88px; /* Large font for emphasis */
   color: var(--primary-color); /* Applies primary color */
 }
 
