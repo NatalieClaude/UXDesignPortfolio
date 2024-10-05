@@ -15,11 +15,13 @@
         <h2>An Enhanced Hotel Booking Experience</h2>
       </header>
       
-      <!-- Main introductory image with updated spacing classes -->
-      <img src="assets/images/StayLocation.png" alt="Stay.com" class="mt-small mb-small" />
+     
 
       <!-- Introduction Section with updated spacing classes -->
-      <section id="intro" class="case-study-section mt-medium mb-medium">
+      <!-- <section id="intro" class="case-study-section mt-medium mb-medium"> -->
+      <section id="intro">
+         <!-- Main introductory image with updated spacing classes -->
+      <img src="assets/images/StayLocation.png" alt="Stay.com" class="mt-small mb-small" />
         <p>
           Stay.com is a desktop app developed during my UX Design Professional
           Diploma, aimed at addressing common user experience issues found in
@@ -32,61 +34,103 @@
       <!-- Full-width image with updated spacing classes -->
       <img src="assets/images/Stay.comMockUp.png" alt="Stay.com" class="full-width mt-small mb-medium" />
 
-      <!-- Process Section with updated spacing classes -->
-      <section id="problem-process" class="case-study-section mt-medium mb-medium">
-        <h3>The Problem</h3>
-        <p>
-          Many hotel booking websites suffer from poor usability, frustrating
-          users with confusing navigation, unclear information, and inefficient
-          booking processes. The goal was to create a website that prioritises
-          intuitive design, clarity, and efficiency, delivering a smoother and
-          more pleasant booking experience.
-        </p>
-     
-        <h3 class="mt-medium">The Process</h3>
-        <p>
-          To identify key issues, I conducted user research through competitive
-          benchmarking, surveys, and user testing. These findings were
-          synthesised into six primary usability problems using affinity
-          mapping, customer journey mapping, and user flow diagrams.
-          Low-fidelity sketches were developed, followed by a high-fidelity
-          interactive prototype in Figma, which was tested for effectiveness and
-          refined based on user feedback.
-        </p>
+      <!-- Problem Process Section -->
+
+        <section id="problem-process">
+          <!-- Problem Section -->
+          <section id="problem">
+              <div id="text-problem">
+                  <h3>The Problem</h3>
+                  <p>
+                      Many hotel booking websites suffer from poor usability, frustrating
+                      users with confusing navigation, unclear information, and inefficient
+                      booking processes. The goal was to create a website that prioritises
+                      intuitive design, clarity, and efficiency, delivering a smoother and
+                      more pleasant booking experience.
+                  </p>
+              </div>
+              <div id="image-problem">
+                  <img src="assets/images/problem.png" alt="problem" />
+              </div>
+          </section>
+      
+          <!-- Process Section -->
+          <section id="process">
+            <div id="image-process">
+              
+              <img src="assets/images/process.png" alt="Process" />  
+            </div>
+            <div id="text-process">
+              <h3>The Process</h3>
+              <p>
+                  To identify key issues, I conducted user research through competitive
+                  benchmarking, surveys, and user testing. These findings were
+                  synthesized into six primary usability problems using affinity
+                  mapping, customer journey mapping, and user flow diagrams.
+                  Low-fidelity sketches were developed, followed by a high-fidelity
+                  interactive prototype in Figma, which was tested for effectiveness and
+                  refined based on user feedback.
+              </p>
+            </div>
+          </section>
       </section>
+      
+      
 
-      <!-- Process image with updated spacing classes -->
-      <img src="assets/images/UxProcessCropped.png" alt="Process" class="smaller-image mt-small mb-medium" />
+      
 
-      <!-- Research Section with updated spacing classes -->
-      <section id="research" class="case-study-section mt-medium mb-medium">
+      <!-- Research Section -->
+      
+      <section id="research">
         <h2 class="mt-medium">Research</h2>
-        <h3 class="mt-medium">Research Method and Tools</h3>
-        <p>
-          To ensure credible findings, I applied a triangulation method, 
-          incorporating competitive benchmarking, user surveys, interviews, and usability testing. 
-          This cross-referenced data helped identify patterns and solidify insights, 
-          ensuring that the design decisions were based on comprehensive research.
-        </p>
-
-        <!-- Image row showing research tools with updated flexbox layout -->
-        <div class="image-row">
-          <img src="assets/images/OnlineSurvey.png" alt="Research tool 1" />
-          <img src="assets/images/Eva.png" alt="Research tool 2" />
+        <div class="research-container">
+            <!-- Text Column -->
+            <div class="text-column">
+                <h3 class="mt-medium">Research Method and Tools</h3>
+                <p>
+                    To ensure credible findings, I applied a triangulation method,
+                    incorporating competitive benchmarking, user surveys, interviews, and usability testing. 
+                    This cross-referenced data helped identify patterns and solidify insights, 
+                    ensuring that the design decisions were based on comprehensive research.
+                </p>
+            </div>
+    
+            <!-- Image Column: 3 images stacked in a single column -->
+            <div class="image-column">
+                <img src="assets/images/competitive-benchmarking.png" alt="Research tool 1" />
+                <img src="assets/images/OnlineSurvey.png" alt="Research tool 2" />
+                <img src="assets/images/Eva.png" alt="Research tool 3" />
+            </div>
         </div>
-      </section>
+    </section>
+    
 
-      <!-- Analysis Section with updated spacing classes -->
-      <section id="analysis" class="case-study-section mt-medium mb-medium">
+      <!-- Analysis Section -->
+        <section id="analysis">
         <h2 class="mt-medium">Analysis</h2>
+
+        <!-- Analysis Container -->
+        <div class="analysis-overview">
+
+          <!-- Text Overview-->
+          <div class="text-analysis-column">
         <p>
           Using tools such as affinity mapping and customer journey maps, 
           I synthesised the unstructured research data into six key insights that
           directly influenced design decisions.
         </p>
+      </div>
+        <!-- Images -->
+         <div class="image-analysis-row">
+          <img src="assets/images/affinity.png" alt="Affinity Map" />
+          <img src="assets/images/customer-journey.png" alt="Affinity Map" />
+
+         </div>
+        </div>
+
 
         <h3 class="mt-small">Analysis Findings</h3>
-        <ul>
+        <ol>
           <li>
             <span class="bold-text">Interface Design:</span> Busy interfaces
             with poor readability (small fonts and low contrast) frustrated
@@ -117,7 +161,7 @@
             transparency in the final booking steps created uncertainty for
             users.
           </li>
-        </ul>
+        </ol>
 
         <h3 class="mt-small">Design Implications</h3>
         <p>These findings had a significant impact on the design:</p>
@@ -129,10 +173,12 @@
           <li>Extras had to be presented clearly, with dynamic feedback to avoid confusion.</li>
           <li>Booking completion required enhanced transparency and a clear summary for final confirmation.</li>
         </ul>
+      </div>
       </section>
 
       <!-- Design Section with updated spacing classes -->
-      <section id="design" class="case-study-section mt-medium mb-medium">
+      <!-- <section id="design" class="case-study-section mt-medium mb-medium"> -->
+        <section id="design">
         <h2 class="mt-medium">Design</h2>
         <p>
           Finally, I used Figma to build a high-fidelity interactive prototype for evaluative testing.
@@ -148,18 +194,18 @@
         </p>
         <img src="assets/images/sketches.jpg" alt="Sketches" class="medium-width mt-small mb-medium" />
 
-        <h4 class="mt-small">Sketch Example (with annotations):</h4>
+        <!-- <h4 class="mt-small">Sketch Example (with annotations):</h4> 
         <ul>
           <li><span class="bold-text">Arrow pointing to sketch layout</span>: "Initial wireframe sketch for the streamlined booking flow."</li>
           <li><span class="bold-text">Arrow pointing to navigation</span>: "Concept for breadcrumb navigation to enhance user orientation."</li>
           <li><span class="bold-text">Arrow pointing to calendar sketch</span>: "Early design for the booking calendar to improve usability."</li>
-        </ul>
+        </ul> -->
 
         <!-- User Flow Diagram Subsection with full-width image and spacing -->
         <h3>User Flow Diagram</h3>
         <p>Next, I created a user-flow diagram to refine the user's path.  
           This also helped identify problems early on and iterate quickly.</p>
-          <img src="assets/images/Homepage.png" alt="User Flow Diagram" class="full-width mt-small mb-medium" />
+          <img src="assets/images/UserFlowDiagram.png" alt="User Flow Diagram" class="full-width mt-small mb-medium" />
 
         <!-- Prototyping Section with updated spacing -->
         <h2 class="mt-medium">Prototyping</h2>
@@ -167,89 +213,125 @@
           After finalising the design with sketches and user flow diagrams, 
           I developed a high-fidelity interactive prototype in Figma for evaluative testing.
         </p>
-        <img src="assets/images/Homepage.png" alt="Figma Prototype" class="full-width mt-small mb-medium" />
+        <img src="assets/images/interactive-prototype.png" alt="Figma Prototype" class="full-width mt-small mb-medium" />
 
         <!-- Design Solutions Breakdown Section -->
         <h2 class="mt-medium">Design Solutions Breakdown</h2>
 
         <!-- Streamlined Interface Design -->
-        <h4 class="mt-small">Streamlined Interface Design</h4>
+        <h3 class="mt-small">Streamlined Interface Design</h3>
         <p>
-          The interface was simplified to focus on key booking elements, reducing cognitive load. By minimizing clutter, users were able to focus on essential tasks, which helped reduce the cognitive load.
+          The simplified interface was designed to prioritise key booking elements, 
+          reducing cognitive load for users. By minimising clutter, 
+          the design allowed users to focus on essential tasks, 
+          resulting in a more intuitive and efficient booking process.
         </p>
-        <img src="assets/images/streamlined-interface.png" alt="Streamlined interface design with minimal distractions" class="mt-small mb-medium" />
+        <img src="assets/images/interface.png" alt="Streamlined interface design with minimal distractions" class="full-width mt-small mb-medium" />
 
-        <!-- Optimized Flow Design with Progressive Disclosure -->
-        <h4 class="mt-small">Optimized Flow Design with Progressive Disclosure</h4>
+        <!-- Optimised Flow Design with Progressive Disclosure -->
+        <h3 class="mt-small">Optimised Flow Design with Progressive Disclosure</h3>
         <p>
-          The booking flow was restructured using progressive disclosure, where users are guided step-by-step through the process. Breadcrumb navigation was added to help users track their progress and backtrack easily.
+          The booking flow was restructured using progressive disclosure, 
+          guiding users step-by-step through the process. Breadcrumb navigation 
+          was added to help users track their progress and backtrack easily without confusion.
         </p>
-        <img src="assets/images/flow-design-progressive-disclosure.png" alt="Optimized booking flow design with breadcrumb navigation" class="mt-small mb-medium" />
+        <img src="assets/images/flow.png" alt="Optimized booking flow design with breadcrumb navigation" class="full-width mt-small mb-medium" />
 
         <!-- Enhanced Search Functionality -->
-        <h4 class="mt-small">Enhanced Search Functionality</h4>
+        <h3 class="mt-small">Enhanced Search Functionality</h3>
         <p>
-          The calendar and map functionality were redesigned to make hotel location searches easier. The interactive calendar provided hover highlights and real-time feedback, while the map dynamically showed hotels based on the user's selection.
+          The calendar and map were designed using proven, familiar elements to make hotel searches 
+          easier and more intuitive. The interactive calendar offers real-time feedback with hover 
+          highlights, and the map dynamically updates hotel locations based on user selection—bringing 
+          together well-known tools for a smooth and seamless booking experience.
         </p>
-        <img src="assets/images/enhanced-search-functionality.png" alt="Improved search functionality with interactive calendar and map" class="mt-small mb-medium" />
+        <img src="assets/images/search-functionality.png" alt="Improved search functionality with interactive calendar and map" class="full-width mt-small mb-medium" />
 
         <!-- Improved Option Comparison -->
-        <h4 class="mt-small">Improved Option Comparison</h4>
+        <h3 class="mt-small">Improved Option Comparison</h3>
         <p>
-          A horizontal filter bar was added to help users quickly refine hotel options, while a grid layout was implemented to display more options without excessive scrolling.
+          A horizontal filter bar was introduced to give more space beneath for displaying hotel options in a grid layout. 
+          This design allows for more options to be shown across the screen at once, reducing excessive scrolling.
         </p>
-        <img src="assets/images/improved-option-comparison.png" alt="Improved option comparison with filter bar and grid layout" class="mt-small mb-medium" />
+        <img src="assets/images/option-comparison.png" alt="Improved option comparison with filter bar and grid layout" class="full-width mt-small mb-medium" />
 
         <!-- Clearer Addition of Extras -->
-        <h4 class="mt-small">Clearer Addition of Extras</h4>
+        <h3 class="mt-small">Clearer Addition of Extras</h3>
         <p>
-          A dedicated extras modal window was introduced to provide clear descriptions and pricing. The booking summary dynamically updated to reflect the total cost as users added or removed extras.
+          A dedicated extras modal was introduced to offer clear descriptions and pricing, 
+          with the booking summary dynamically updating to show the total cost as extras 
+          are added or removed.
         </p>
-        <img src="assets/images/addition-of-extras.png" alt="Clear extras modal with dynamic pricing updates" class="mt-small mb-medium" />
+        <img src="assets/images/extras.png" alt="Clear extras modal with dynamic pricing updates" class="full-width mt-small mb-medium" />
 
         <!-- Improved Booking Completion Transparency -->
-        <h4 class="mt-small">Improved Booking Completion Transparency</h4>
+        <h3 class="mt-small">Improved Booking Completion Transparency</h3>
         <p>
-          A detailed booking summary was added to ensure users could review all their selections, including dates, room type, and extras, before confirming their booking. Editable fields were provided to allow users to make last-minute changes without restarting.
+          A detailed booking summary was added so users could review all their selections—dates, room type, 
+          and extras—before confirming their booking. Editable fields allow for last-minute changes without 
+          needing to restart the process.
         </p>
-        <img src="assets/images/booking-completion-transparency.png" alt="Final booking summary with editable fields for last-minute changes" class="mt-small mb-medium" />
+        <img src="assets/images/booking-completion.png" alt="Final booking summary with editable fields for last-minute changes" class="full-width mt-small mb-small" />
       </section>
 
       <!-- Evaluative Testing Section with updated spacing -->
-      <section id="testing" class="case-study-section mt-medium mb-medium">
+      <!-- <section id="testing" class="case-study-section mt-medium mb-medium"> -->
+        <section id="testing">
         <h2 class="mt-medium">Evaluative Testing</h2>
-        <p>
-          I conducted user tests to evaluate the design's effectiveness by
-          having users book a hotel room through the prototype. Key findings
-          include:
-        </p>
-        <ul>
-          <li><span class="bold-text">Interface Design:</span>Generally well-received, though text size was occasionally noted as too small.</li>
-          <li><span class="bold-text">Flow:</span>Smooth overall, though breadcrumb navigation had minimal impact.</li>
-          <li><span class="bold-text">Search:</span>Calendar interaction was smooth, but map functionality needed refinement.</li>
-          <li><span class="bold-text">Option Comparison:</span>Users found it easy to compare options but wanted more overview information.</li>
-          <li><span class="bold-text">Adding Extras:</span>Clear navigation, though some users found checkboxes confusing.</li>
-          <li><span class="bold-text">Booking Completion:</span> Users were satisfied with the summary but noted that text size could be larger.</li>
-        </ul>
-        <img src="assets/testing-image.png" alt="Testing Results" class="mt-small mb-medium" />
-      </section>
+        <div class="text-image-row">
+          <div class="text">
+            <p>
+              <span class="bold-text">I conducted user tests to evaluate the design's effectiveness by
+              having users book a hotel room through the prototype.</span>
+            </p>
+           
+            <p><span class="bold-text">Key findings include:</span></p>
+          
+            <div class="list">
+              <ul>
+                <li><span class="bold-text">Interface Design:</span> Generally well-received, though text size was occasionally noted as too small.</li>
+                <li><span class="bold-text">Flow:</span> Smooth overall, though breadcrumb navigation had minimal impact.</li>
+                <li><span class="bold-text">Search:</span> Calendar interaction was smooth, but map functionality needed refinement.</li>
+                <li><span class="bold-text">Option Comparison:</span> Users found it easy to compare options but wanted more overview information.</li>
+                <li><span class="bold-text">Adding Extras:</span> Clear navigation, though some users found checkboxes confusing.</li>
+                <li><span class="bold-text">Booking Completion:</span> Users were satisfied with the summary but noted that text size could be larger.</li>
+              </ul>
+          </div>
+        </div>
+        <div class="image">
+          <img src="assets/images/findings.png" alt="Findings"/>  
+        </div>
+    </div>
+  </section>
 
       <!-- Further Development Section with updated spacing -->
-      <section id="development" class="case-study-section mt-medium mb-medium">
+      <!-- <section id="development" class="case-study-section mt-medium mb-medium"> -->
+        <section id="development">
         <h2 class="mt-medium">Further Development</h2>
-        <p>Based on user feedback, I identified key areas for future improvement:</p>
-        <ul>
-          <li>Increase text size in key areas for better readability.</li>
-          <li>Provide more overview information to reduce uncertainty during option comparison.</li>
-          <li>Ensure breadcrumb navigation is consistently used throughout all stages of the booking process.</li>
-          <li>Refine map functionality for smoother interaction.</li>
-          <li>Clarify the purpose of checkboxes in the extras window to reduce confusion.</li>
-        </ul>
+        <div class="text-image-row">
+          <div class="image">
+            <img src="assets/images/further-development.png" alt="Further Development" class="full-width mt-small mb-medium" />  
+          </div>
+          <div class="text">
+            <p>
+              <span class="bold-text">Based on user feedback, I identified key areas for future improvement:</span>
+            </p>
+            <div class="list">
+              <ol>
+                <li>Increase text size in key areas for better readability.</li>
+                <li>Provide more overview information to reduce uncertainty during option comparison.</li>
+                <li>Ensure breadcrumb navigation is consistently used throughout all stages of the booking process.</li>
+                <li>Refine map functionality for smoother interaction.</li>
+                <li>Clarify the purpose of checkboxes in the extras window to reduce confusion.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
     </div>
     <!-- Footer with updated spacing -->
-    <footer class="mt-medium">
+    <footer>
       <p>&copy; 2024 Natalie Fitzmaurice. All rights reserved.</p>
     </footer>
   </body>
