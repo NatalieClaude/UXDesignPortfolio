@@ -17,17 +17,18 @@
 */
 :root {
   --primary-color: #605dec; /* Main accent color: used for page title and section titles */
-  --subheading-color: #3F3D56; /* Subheading color: used for subheadings */
+  --subheading-color: #3f3d56; /* Subheading color: used for subheadings */
   --text-color: #555; /* Default text color */
   --heading-color: #333; /* Main heading text color */
   --bg-color: #ffffff; /* Background color */
+  --primary-color-transparent-50: rgba(96, 93, 236, 0.5); /* 50% transparent */
   --space-extralarge: 80px;
   --space-large: 50px; /* Large spacing for sections */
   --space-medium: 30px; /* Medium spacing for related elements */
   --space-small: 20px; /* Small spacing for close elements */
   --space-micro: 10px; /* Minimal spacing for micro adjustments */
-  --p-fontsize: 1.05rem;
-  --caption-fontsize: 0.9rem;
+  --p-fontsize: 1.1em;
+  --caption-fontsize: 1em;
 }
 
 /* 
@@ -44,7 +45,7 @@
 }
 
 .mt-large {
-  margin-top: var(--space-large)
+  margin-top: var(--space-large);
 }
 .mb-small {
   margin-bottom: var(--space-small);
@@ -66,72 +67,130 @@
   Global Body Styling:
   Sets default styles for the entire page
 */
+
 body {
   font-family: "Open Sans", sans-serif; /* Applies a clean, modern font */
-  line-height: 1.6; /* Improves text readability */
   background-color: var(--bg-color); /* Sets a white background */
-  color: var(--heading-color); /* Default text color */
-  /*  padding: 20px; Adds padding around the page */
   height: 100%; /* Ensures the body takes the full viewport height */
   overscroll-behavior: none;
+}
+
+/* Global Heading (h2) Styling */
+h2 {
+  color: var(--primary-color);
+  font-size: 2.5em; /* Size adjusted to ensure consistency across different headings */
+  font-weight: bold; /* Emphasizes importance */
+  margin-bottom: var(--space-small); /* Adds space below headings for clarity */
+  padding-bottom: var(
+    --space-medium
+  ); /* Adds padding to visually separate heading from the content */
+  border-bottom: 2px solid var(--primary-color); /* Adds underline for emphasis */
+}
+
+/* Global Heading (h3) Styling */
+h3 {
+  font-size: 1.8em; /* Emphasis for sub-headings */
+  margin-top: var(--space-medium);
+  margin-bottom: var(--space-medium);
+  color: var(--subheading-color);
+}
+
+h4 {
+  font-size: 1.3em;
+  color: var(--subtitle-color);
+  margin-bottom: var(--space-small);
+  padding: var(--space-micro);
+  border-bottom: 2px dashed var(--primary-color);
+ 
+}
+
+/* Global Image Styling */
+img {
+  max-width: 100%; /* Prevents images from overflowing their container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevents default inline space below images */
+  margin: 0 auto; /* Ensures all images are horizontally centered */
+  border-radius: 8px; /* Adds slight rounding to enhance visual appeal */
+}
+
+/* Global Paragraph Styling */
+p {
+  line-height: 1.6; /* Adds line spacing for readability */
+  font-size: var(--p-fontsize); /* Adjust font size with relative units */
+  color: var(--text-color); /* Applies text color */
+}
+
+/* Global Caption Styling */
+figcaption {
+  font-size: var(
+    --caption-fontsize
+  ); /* Slightly smaller font size for captions */
+  color: var(
+    --caption-color,
+    #555
+  ); /* Use a CSS variable for consistency, with a fallback color */
+  margin-top: var(--space-micro); /* Adds space above the caption */
+  text-align: center; /* Center-align the caption */
+}
+
+.section {
+  
+  margin-bottom: 120px;
+}
+
+.subsection {
+  margin-bottom: var(--space-extralarge);
 }
 
 /* 
   Container Styling:
   This centers the main content and limits its width for readability
 */
-.container {
+#container {
   width: 90vw; /* Uses 90% of the viewport width */
   max-width: 1000px; /* Sets a maximum width for larger screens */
   margin: 0 auto; /* Centers the container horizontally */
-  padding: 0 20px; /* Adds padding to the sides */
+  padding: 0 var(--space-small); /* Adds padding to the sides */
 }
-
 
 /* Header Styling - Applied to the overall header element */
 header {
   text-align: center; /* Centers all header text */
-  margin-bottom: var(--space-medium); /* Adds spacing below header for separation */
- 
+  margin-bottom: var(
+    --space-medium
+  ); /* Adds spacing below header for separation */
 }
 
 /* Header Title (h1) Styling */
 .case-study-title {
   font-size: 6em; /* Adjusted font size to be relative */
   color: var(--primary-color); /* Primary color for emphasis */
-  margin-bottom: var(--space-small); /* Space below for better separation */
+  margin-top: var(--space-medium);
+  margin-bottom: var(--space-medium); /* Space below for better separation */
 }
 
 /* Header Subtitle (h2) Styling */
 .case-study-subtitle {
-  color: var(--subheading-color, #3F3D56); /* Lighter color for subtitle, with a fallback */
-  font-size: 2em; /* Slightly smaller than h1 */
+  color: var(
+    --subheading-color,
+    #3f3d56
+  ); /* Lighter color for subtitle, with a fallback */
+  font-size: 2.5em; /* Slightly smaller than h1 */
   margin-bottom: 0; /* No extra space to keep compact */
 }
 
-/* Global Heading (h2) Styling */
-h2 {
-  color: var(--primary-color); /* Applies primary color for general h2s */
-  font-size: 2.5em; /* Size adjusted to ensure consistency across different headings */
-  font-weight: bold; /* Emphasizes importance */
-  margin-bottom: var(--space-small); /* Adds space below headings for clarity */
-  padding-bottom: var(--space-medium); /* Adds padding to visually separate heading from the content */
-  border-bottom: 2px solid var(--primary-color); /* Adds underline for emphasis */
-}
+/* Introduction */
 
 /* Container for Introduction Section */
-.intro-section {
+#intro {
   width: 100%; /* Take up the full width of the page */
-  padding: 20px 0; /* Adds some padding at the top and bottom */
-}
-
-/* Introduction Content - Using Flexbox */
-.intro-content {
+ /* padding: var(--space-extralarge) 0;  Adds some padding at the top and bottom */
   display: flex; /* Arrange children in a row (side by side) */
   align-items: center; /* Vertically center the content */
-  gap: 20px; /* Adds space between the image and the text */
+  gap: var(--space-small); /* Adds space between the image and the text */
   max-width: 1200px; /* Limit the maximum width of the content for better readability */
-  margin: 0 auto; /* Centers the content within the section */
+  margin: var(--space-large) auto; /* Centers the content within the section */
+ 
 }
 
 /* Image Styling */
@@ -167,7 +226,7 @@ h2 {
   }
 }
 
-
+/* Final Design Image */
 
 
 /* Full-Width Image Styling */
@@ -177,56 +236,33 @@ h2 {
   object-fit: contain; /* Ensure the image does not get distorted */
 }
 
-/* Caption Styling */
-.image-caption {
-  font-size: var(--caption-fontsize); /* Slightly smaller font size for captions */
-  color: var(--caption-color, #555); /* Use a CSS variable for consistency, with a fallback color */
-  margin-top: var(--space-micro); /* Adds space above the caption */
-  text-align: center; /* Center-align the caption */
-}
 
-
-/* General Image Styling */
-img {
-  max-width: 100%; /* Prevents images from overflowing their container */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Prevents default inline space below images */
-  margin: 0 auto; /* Ensures all images are horizontally centered */
-  border-radius: 8px; /* Adds slight rounding to enhance visual appeal */
-}
-
-
-/* Paragraph Styling */
-p {
-  line-height: 1.6; /* Adds line spacing for readability */
-  font-size: var(--p-fontsize); /* Adjust font size with relative units */
-  color: var(--text-color); /* Applies text color */
-}
-
-
-
-/* Problem and Process Section Styling */
-.problem-process {
+/* Text-Image-Grid Section */
+.text-image-grid {
   border: 2px dashed var(--primary-color);
   border-radius: 10px;
-  margin: var(--space-extralarge) 0; /* Use CSS variable for consistent spacing */
+  /* margin: var(--space-extralarge) 0;  Use CSS variable for consistent spacing */
   padding: var(--space-large) var(--space-medium);
 }
 
 /* Flexbox layout for the problem and process sections */
-.problem-section,
-.process-section {
+.text-image-row,
+.image-text-row {
   display: flex;
   align-items: center; /* Vertically centers the text and image */
   justify-content: space-between; /* Adds space between text and image */
   gap: var(--space-small); /* Adds consistent spacing between elements */
-  flex-wrap: wrap; /* Allows elements to stack in smaller viewports */ 
+  flex-wrap: wrap; /* Allows elements to stack in smaller viewports */
 }
 
 /* Add vertical space between the Problem Section and the Process Section */
-.problem-section {
-  margin-bottom: var(--space-extralarge); /* Adds vertical space below the problem section */
+.text-image-row {
+  margin-bottom: var(
+    --space-extralarge
+  ); /* Adds vertical space below the problem section */
 }
+
+
 
 /* Text Content Styling */
 .text-content {
@@ -236,24 +272,17 @@ p {
 /* Image Content Styling */
 .image-content {
   flex: 1;
-  text-align: center; /* Center images horizontally within their container */
 }
 
-/* Section Heading Styling */
-.section-heading {
-  font-size: 1.5em; /* Adjusted to be responsive */
-  color: var(--primary-color);
-  margin-bottom: var(--space-small);
-}
-
-/* Custom Margin for Specific Captions */
+/* Custom Margin for Specific Caption */
 .custom-caption {
-  margin-top: var(--space-large); /* Overrides the margin specifically for this caption */
+  margin-top: var(
+    --space-large
+  ); /* Overrides the margin specifically for this caption */
 }
 
-/* Ensure images are responsive */
-.problem-image,
-.process-image {
+/* Ensure images are responsive: Not entirely sure what this is doing */
+.image {
   max-width: 100%; /* Prevent images from exceeding their container width */
   width: 85%; /* Limits the width to ensure space for text content */
   height: auto; /* Keep the aspect ratio intact */
@@ -263,173 +292,116 @@ p {
 
 /* Spacing for paragraphs */
 .spaced-paragraph {
-  margin-bottom: var(--space-small); /* Adds custom spacing between these paragraphs */
+  margin-bottom: var(
+    --space-small
+  ); /* Adds custom spacing between these paragraphs */
 }
 
+/* *** Research Section Styling *** 
 
-
-/* Research Section Styling */
 #research {
-  margin: var(--space-large) 0; /* Use variable for consistent vertical spacing */
+  /* margin: var(--space-small) 0;  Use variable for consistent vertical spacing
 }
 
-/* Section Heading Styling */
-.section-heading {
-  font-size: 2em; /* Increased size for main heading emphasis */
-  margin-bottom: var(--space-small); /* Adds spacing below the heading */
-}
+ */
 
-/* Sub-heading Styling */
-.sub-heading {
-  font-size: 1.5em; /* Emphasis for sub-headings */
-  margin-top: var(--space-small);
-  margin-bottom: var(--space-small);
-}
-
-/* Flexbox layout for side-by-side images */
+/* Research Images */
 .image-row {
-  display: flex; /* Enables flexible layout */
- /* flex-wrap: wrap;  Allows images to stack in smaller viewports */
-  justify-content: space-between; /* Space images evenly with extra space distributed around */
-  gap: var(--space-small); /* Adds space between images */
-  margin: var(--space-medium) 0; /* Adds spacing above and below the image row */
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-small);
 }
 
-/* Individual Figure Styling */
-.image-figure {
-  flex: 1 1 calc(30% - var(--space-small)); /* Three images per row, ensuring consistent width even when wrapping */
-  
-  text-align: center; /* Centers the caption below each image */
-  margin-bottom: var(--space-small); /* Adds some bottom spacing to ensure a clean layout */
-}
-
-/* Image Styling */
+/* Responsive Image Styling */
 .research-image {
-  width: 100%; /* Image takes full width of its container */
-  height: 250px; /* Set a consistent height for uniformity across all images */
-  object-fit: contain; /* Ensures the image covers the container while maintaining aspect ratio */
- /*  border: 2px solid black; Adds a black border for emphasis */
-  border-radius: 8px; /* Adds a slight rounding to images for visual appeal */
+  flex: 1;
+  object-fit: cover; /* Ensures image fills the container while maintaining aspect ratio */
+  width: 100%; /* Allow the image to scale to the container's width */
+  max-width: calc(
+    33.33% - (var(--space-small))
+  ); /* Allow each image to take up a maximum of 33% of the container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 400px; /* Set a maximum height to avoid large images */
 }
 
-/* Responsive Handling for Smaller Viewports */
+/* Target the first image to position its content differently */
+.image-row img:first-child {
+  object-position: left; /* Crop the first image from the left-hand side */
+}
+
+/* Make images responsive on smaller screens */
 @media (max-width: 768px) {
   .image-row {
-    flex-direction: column; /* Stack images vertically on smaller screens */
-    gap: var(--space-medium); /* Increase spacing between stacked images */
-    align-items: center; /* Center images on small screens for a cleaner look */
-  }
-
-  .image-figure {
-    width: 100%; /* Each figure takes full width on smaller screens */
-    margin-bottom: var(--space-small); /* Adds space between stacked images */
+    flex-direction: column; /* Stack images vertically on small screens */
   }
 
   .research-image {
-    width: 100%; /* Ensure images fill the width of their container */
-    height: auto; /* Adjust height for mobile to be consistent but flexible */
+    max-width: 100%; /* Each image takes up full width in stacked view */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
 
-
-
+.spaced-content {
+  margin-bottom: var(--space-medium);
+}
 
 /* Analysis Section Styling */
+
+/*  
 #analysis {
-  margin: var(--space-large) 0; /* Consistent vertical spacing */
+  margin: var(--space-large) 0; /* Consistent vertical spacing 
+}*/
+
+/* Research Images */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-small);
 }
 
-/* Section Heading Styling */
-.section-heading {
-  font-size: 2em; /* Larger font size for main heading */
-  margin-bottom: var(--space-small); /* Adds space below heading */
-}
-
-/* Analysis Overview Container */
-.analysis-overview {
-  display: flex; /* Enables flex layout to align text and images side-by-side */
-  flex-wrap: wrap; /* Allows wrapping in smaller viewports */
-  gap: var(--space-medium); /* Adds space between text and image row */
-  align-items: flex-start; /* Align items at the top */
-}
-
-/* Text Analysis Column Styling */
-.text-analysis-column {
-  flex: 1 1 100%; /* Full width on smaller screens, flexible on larger screens */
-  max-width: 600px; /* Limit width to keep text more readable */
-  margin-bottom: var(--space-medium); /* Adds spacing below the text column */
-}
-
-/* Flexbox layout for image row in analysis overview */
-.image-analysis-row {
-  display: flex; /* Enables side-by-side images */
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  justify-content: space-between; /* Space between figures */
-  gap: var(--space-small); /* Adds spacing between images */
-}
-
-/* Figure Styling */
-.image-figure {
-  flex: 1 1 calc(50% - var(--space-small)); /* Ensures two columns in flex, with gap adjustment */
-  max-width: 100%; /* Prevents figures from exceeding container width */
-  text-align: center; /* Centers the figcaption */
-}
-
-/* Image Styling for Analysis Section */
+/* Image Styling */
 .analysis-image {
-  width: 100%; /* Image fills the figure width */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 300px; /* Limit max width to prevent overly large images */
-  object-fit: cover; /* Ensures images cover their container without distortion */
-  border-radius: 8px; /* Adds slight rounding for visual appeal */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
-  background-color: #E4E4E4;
+  flex: 1;
+  object-fit: contain; /* Ensures image fills the container while maintaining aspect ratio */
+  width: 100%; /* Allow the image to scale to the container's width */
+  max-width: calc(
+    50% - (var(--space-small))
+  ); /* Allow each image to take up a maximum of 50% of the container */
+
+  max-height: 400px; /* Set a maximum height to avoid large images */
+  background-color: #edecec;
 }
 
-/* Responsive Handling for Smaller Screens */
-@media (max-width: 768px) {
-  .analysis-overview {
-    flex-direction: column; /* Stack text and images vertically on smaller screens */
-  }
-
-  .text-analysis-column {
-    margin-bottom: var(--space-small); /* Reduce margin for tighter layout on smaller screens */
-  }
-
-  .image-figure {
-    flex: 1 1 100%; /* Each figure takes full width when stacked vertically */
-    margin-bottom: var(--space-small); /* Adds space between stacked images */
-  }
+.grid-panel {
+  padding: var(--space-large);
+  border-radius: 10px;
+  background-color: var(--primary-color); /* 50% transparent primary color */
 }
-
-
 
 /* Findings Container Styling */
-.findings {
-  margin: var(--space-large) 0;
-  padding: var(--space-medium);
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-/* Grid Layout for Key Findings */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Makes it responsive */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+   /* Makes it responsive */
   gap: var(--space-small); /* Consistent spacing between items */
-  padding: var(--space-medium);
 }
 
-.finding-item {
+
+.grid-item {
   display: flex;
   align-items: flex-start;
+  margin: var(--space-small);
+  background-color: white;
+  border-radius: 10px;
+  padding: var(--space-small)
 }
 
 /* Styling for the Number Circle */
 .number {
-  background-color: white;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
   border-radius: 50%;
   border: 2px solid var(--primary-color);
   width: 40px;
@@ -439,177 +411,35 @@ p {
   align-items: center;
   font-size: 1.125rem;
   font-weight: bold;
-  margin-right: var(--space-small); /* Adds consistent spacing between number and text */
+  margin-right: var(
+    --space-small
+  ); /* Adds consistent spacing between number and text */
   flex-shrink: 0; /* Prevent the number from shrinking */
 }
 
-/* Text Container */
-.text-container {
-  display: block;
+/* Styling for the paragraph text inside grid container */
+.grid-container p {
+  color: var(--subtitle-color);
 }
 
+/* DESIGN SECTION */
 
-/* Figure Styling */
-.image-figure {
-  flex: 1 1 calc(50% - var(--space-small)); /* Two columns in flex, with gap adjustment */
-  text-align: center; /* Centers figcaption */
-  
+/* #design{ 
+
+}*/
+
+.user-flow-image {
+  object-fit: cover;
 }
 
-/* Image Styling for Analysis Section */
-.analysis-image {
-  width: 100%; /* Image fills the figure width */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 300px; /* Limit max width to prevent very large images */
-  object-fit: cover; /* Ensures images cover their container without distortion */
-  border-radius: 8px; /* Adds slight rounding for visual appeal */
-}
-
-/* Responsive Handling for Smaller Screens */
-@media (max-width: 768px) {
-  .image-analysis-row {
-    flex-direction: column; /* Stack images vertically on smaller screens */
-  }
-
-  .image-figure {
-    width: 100%; /* Full width for each figure when stacked */
-    margin-bottom: var(--space-small);
-  }
-}
-
-
-
-
-
-
-/* Text column will take equal space as the image column */
-.text-column,
-.image-column {
-  flex: 1; /* Make both columns take up equal space */
-}
-
-/* Make sure the images are displayed in a vertical column */
-.image-column {
-  display: flex;
-  flex-direction: column; /* Stack images vertically */
-  gap: 20px; /* Space between the images */
-}
-
-.image-column img {
-  max-width: 100%; /* Ensure images take full width of the container */
-  height: auto; /* Maintain the aspect ratio of the images */
-}
-
-/* Optional: make the layout stack on small screens */
-@media (max-width: 768px) {
-  .research-container {
-    flex-direction: column; /* Stack the text and image columns vertically */
-  }
-
-  .image-column img {
-    max-width: 100%; /* Ensure the images take full width in mobile view */
-  }
-}
-
-
-
-
-
-
-
-
-/* Sketches and User Flow Sections */
-.sketches-section,
-.user-flow-section {
-  display: flex; /* Use Flexbox to position elements side by side */
-  align-items: flex-start; /* Align items at the top */
-  gap: 40px; /* Space between the text and the image */
-}
-
-/* Text content styling for both sections */
-.text-content {
-  flex: 1; /* Allow the text content to take up available space */
-}
-
-/* Shared image styling for consistency */
-.fixed-size {
-  width: 50%; /* Set both images to the same width */
-  height: 300px; /* Set both images to the same height */
-  object-fit: cover; /* Crop the image to fit the container while maintaining aspect ratio */
-  /*border: 2px solid var(--primary-color); /* Add a border with your primary color */
-  /*border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .sketches-section,
-  .user-flow-section {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-  }
-
-  .fixed-size {
-    width: 100%; /* Make the images take full width on small screens */
-    height: auto; /* Let the height adjust automatically on smaller screens */
-    object-fit: contain; /* Optional: Adjust fit on smaller screens */
-  }
-}
-
-.bordered {
-  border: 2px solid rgba(96, 93, 236, 0.5);
-}
-
-
-
-a {
-  color: var(--primary-color); /* Change link color */
-  text-decoration: none; /* Remove underline */
-}
-
-a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
-
-.design-solutions {
-  display: flex;
-  justify-content: space-between; /* Distribute space between the elements */
-  align-items: center;
-  gap: 20px;
-}
-
-.design-solutions .text-content {
-  flex: 1; /* Allow the text content to take up available space */
-}
-
-.design-solutions img {
-  flex: 1; /* Allow the image to take up equal space */
-  max-width: 100%; /* Ensure the image is responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.interface-solution {
-  display: flex;
-  justify-content: space-between; /* Distribute space between the elements */
-  /* align-items: center; */
-  gap: 20px;
-}
-
-.interface-solution .text-content {
-  flex: 1; /* Text content takes up less space */
-}
-
-.interface-solution img {
-  flex: 2.5; /* Image takes up more space */
-  max-width: 100%; /* Ensure the image is responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* 
-  Full-width images:
-  Ensures images with this class take the entire width of their container
-*/
 .full-width {
   width: 100%;
   max-width: 100%;
+}
+
+.further-dev-image {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .half-width {
@@ -630,30 +460,9 @@ a:hover {
   padding: 5px; /* Optional: Adds some spacing between the image and the border */
 }
 
-
-
-
-
-
-h3 {
-  color: #36454f;
-}
-
-
-h3 {
-  font-size: 32px; /* Slightly smaller font size for h3 */
-}
-
-h4 {
-  color: black;
-  font-size: 24px;
-  margin: 0; /*Ensure headings are aligned properly */
-}
-
 .bold-text {
   font-weight: bold;
 }
-
 
 .image-analysis-row {
   display: flex; /* Enables Flexbox */
@@ -684,19 +493,6 @@ h4 {
   flex-basis: 60%; /* Text takes 60% of the row's width */
 }
 
-.image {
-  flex-grow: 1; /* Image takes up less space, but grows relative to the text */
-  flex-basis: 40%; /* Image takes 40% of the row's width */
-  display: flex;
-  justify-content: center; /* Horizontally centers the image */
-}
-
-
-
-
-
-
-
 /* 
   Section Styling:
   Styles each section of the case study
@@ -725,14 +521,6 @@ li {
 
 .list {
   padding-top: 10px;
-}
-
-
-
-figcaption {
-  padding: 10px;
-  font-size: 16px; /* Slightly smaller font size for captions */
-  color: #000000; /* Lighter gray color for the caption */
 }
 
 /* Footer Styling */
