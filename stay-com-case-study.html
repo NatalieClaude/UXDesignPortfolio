@@ -4,20 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stay.com Case Study</title>
-    <!-- Link to the updated CSS stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet" />
+    
+    <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="updated-stay.css" />
-    <!-- <script src="script.js"></script> -->
+    
+    
+
   </head>
 
+  
+
   <body>
+
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    
     <section id="container">
       <!-- Case Study Header -->
-      <header>
+      <section id="title">
         <h1 class="case-study-title">Stay.com</h1>
         <h2 class="case-study-subtitle">
           An Enhanced Hotel Booking Experience
         </h2>
-      </header>
+      </section>
 
       <!-- Introduction Section -->
 
@@ -121,16 +135,16 @@
         <h2>Research</h2>
 
         <!-- Subheading and Text -->
-         <div class="spaced-content">
-        <h3>Research: Approach and Methods</h3>
-        <p>
-          To ensure credible findings, I applied a triangulation method,
-          incorporating competitive benchmarking, user surveys, interviews, and
-          usability testing. This cross-referenced data helped identify patterns
-          and solidify insights, ensuring that the design decisions were based
-          on comprehensive research.
-        </p>
-      </div>
+        <div class="spaced-content">
+          <h3>Research: Approach and Methods</h3>
+          <p>
+            To ensure credible findings, I applied a triangulation method,
+            incorporating competitive benchmarking, user surveys, interviews,
+            and usability testing. This cross-referenced data helped identify
+            patterns and solidify insights, ensuring that the design decisions
+            were based on comprehensive research.
+          </p>
+        </div>
 
         <div class="image-row">
           <img
@@ -158,17 +172,17 @@
       <section id="analysis" class="section">
         <section class="subsection">
           <div class="spaced-content">
-          <h2>Analysis</h2>
-          <!-- Subheading and Text -->
-          <h3>Analysis: Techniques and Findings</h3>
+            <h2>Analysis</h2>
+            <!-- Subheading and Text -->
+            <h3>Analysis: Techniques and Findings</h3>
 
-          <!-- Text Overview -->
+            <!-- Text Overview -->
 
-          <p>
-            Using tools such as affinity mapping and customer journey maps, I
-            synthesised the unstructured research data into six key insights
-            that directly influenced the final design.
-          </p>
+            <p>
+              Using tools such as affinity mapping and customer journey maps, I
+              synthesised the unstructured research data into six key insights
+              that directly influenced the final design.
+            </p>
           </div>
 
           <div class="image-row">
@@ -187,9 +201,8 @@
         </section>
 
         <!-- Findings Section -->
-<h3>Key Findings</h3>
+        <h3>Key Findings</h3>
         <section class="grid-panel subsection">
-          
           <div class="grid-container">
             <!-- Repeated grid items -->
             <div class="grid-item">
@@ -268,7 +281,6 @@
         <h3>Design Goals</h3>
 
         <section class="grid-panel subsection">
-         
           <div class="grid-container">
             <!-- Repeated grid items -->
             <div class="grid-item">
@@ -393,7 +405,6 @@
       <section id="prototyping" class="section">
         <h2>Prototyping</h2>
 
-        
         <p class="spaced-paragraph">
           After finalising the design with sketches and user flow diagrams, I
           developed a high-fidelity, interactive protoype in Figma for
@@ -418,116 +429,113 @@
         </figure>
       </section>
 
-
       <section id="design-solutions" class="section">
         <!-- Design Solutions Breakdown Section -->
         <h2>Design Solutions Breakdown</h2>
 
-        
-<section class="subsection">
-        <!-- Streamlined Interface Design -->
-        <h3>Streamlined Interface Design</h3>
-<div class="spaced-content">
-        <p>
-          The simplified interface was designed to prioritise key booking
-          elements, reducing cognitive load for users. By minimising clutter,
-          the design allowed users to focus on essential tasks, resulting in a
-          more intuitive and efficient booking process.
-        </p>
-        </div>
+        <section class="subsection">
+          <!-- Streamlined Interface Design -->
+          <h3>Streamlined Interface Design</h3>
+          <div class="spaced-content">
+            <p>
+              The simplified interface was designed to prioritise key booking
+              elements, reducing cognitive load for users. By minimising
+              clutter, the design allowed users to focus on essential tasks,
+              resulting in a more intuitive and efficient booking process.
+            </p>
+          </div>
 
-        <img
-          src="assets/images/interface.png"
-          alt="Streamlined interface design with minimal distractions"
-        />
-      </section>
-
-      <section class="subsection">
-
-        <!-- Optimised Flow Design with Progressive Disclosure -->
-        <h3>Optimised Flow Design with Progressive Disclosure</h3>
-        <div class="spaced-content">
-        <p>
-          The booking flow was restructured using progressive disclosure,
-          guiding users step-by-step through the process. Breadcrumb navigation
-          was added to help users track their progress and backtrack easily
-          without confusion.
-        </p>
-        </div>
-        <img
-          src="assets/images/flow.png"
-          alt="Optimized booking flow design with breadcrumb navigation"
-        />
+          <img
+            src="assets/images/interface.png"
+            alt="Streamlined interface design with minimal distractions"
+          />
         </section>
 
         <section class="subsection">
-        <!-- Enhanced Search Functionality -->
-        <h3>Enhanced Search Functionality</h3>
-        <div class="spaced-content">
-        <p>
-          The calendar and map were designed using proven, familiar elements to
-          make hotel searches easier and more intuitive. The interactive
-          calendar offers real-time feedback with hover highlights, and the map
-          dynamically updates hotel locations based on user selection—bringing
-          together well-known tools for a smooth and seamless booking
-          experience.
-        </p>
-        </div>
-        <img
-          src="assets/images/search-functionality.png"
-          alt="Improved search functionality with interactive calendar and map"
-        />
+          <!-- Optimised Flow Design with Progressive Disclosure -->
+          <h3>Optimised Flow Design with Progressive Disclosure</h3>
+          <div class="spaced-content">
+            <p>
+              The booking flow was restructured using progressive disclosure,
+              guiding users step-by-step through the process. Breadcrumb
+              navigation was added to help users track their progress and
+              backtrack easily without confusion.
+            </p>
+          </div>
+          <img
+            src="assets/images/flow.png"
+            alt="Optimized booking flow design with breadcrumb navigation"
+          />
         </section>
 
         <section class="subsection">
-        <!-- Improved Option Comparison -->
-        <h3>Improved Option Comparison</h3>
-        <div class="spaced-content">
-        <p>
-          A horizontal filter bar was introduced to give more space beneath for
-          displaying hotel options in a grid layout. This design allows for more
-          options to be shown across the screen at once, reducing excessive
-          scrolling.
-        </p>
-        </div>
-        <img
-          src="assets/images/option-comparison.png"
-          alt="Improved option comparison with filter bar and grid layout"
-        />
-</section>
-
-<section class="subsection">
-        <!-- Clearer Addition of Extras -->
-        <h3>Clearer Addition of Extras</h3>
-        <div class="spaced-content">
-        <p>
-          A dedicated extras modal was introduced to offer clear descriptions
-          and pricing, with the booking summary dynamically updating to show the
-          total cost as extras are added or removed.
-        </p>
-        </div>
-        <img
-          src="assets/images/extras.png"
-          alt="Clear extras modal with dynamic pricing updates"
-        />
+          <!-- Enhanced Search Functionality -->
+          <h3>Enhanced Search Functionality</h3>
+          <div class="spaced-content">
+            <p>
+              The calendar and map were designed using proven, familiar elements
+              to make hotel searches easier and more intuitive. The interactive
+              calendar offers real-time feedback with hover highlights, and the
+              map dynamically updates hotel locations based on user
+              selection—bringing together well-known tools for a smooth and
+              seamless booking experience.
+            </p>
+          </div>
+          <img
+            src="assets/images/search-functionality.png"
+            alt="Improved search functionality with interactive calendar and map"
+          />
         </section>
 
         <section class="subsection">
-        <!-- Improved Booking Completion Transparency -->
-        <h3>Improved Booking Completion Transparency</h3>
-        <div class="spaced-content">
-        <p>
-          A detailed booking summary was added so users could review all their
-          selections—dates, room type, and extras—before confirming their
-          booking. Editable fields allow for last-minute changes without needing
-          to restart the process.
-        </p>
-        </div>
-        <img
-          src="assets/images/booking-completion.png"
-          alt="Final booking summary with editable fields for last-minute changes"
-        />
-      </section>
+          <!-- Improved Option Comparison -->
+          <h3>Improved Option Comparison</h3>
+          <div class="spaced-content">
+            <p>
+              A horizontal filter bar was introduced to give more space beneath
+              for displaying hotel options in a grid layout. This design allows
+              for more options to be shown across the screen at once, reducing
+              excessive scrolling.
+            </p>
+          </div>
+          <img
+            src="assets/images/option-comparison.png"
+            alt="Improved option comparison with filter bar and grid layout"
+          />
+        </section>
+
+        <section class="subsection">
+          <!-- Clearer Addition of Extras -->
+          <h3>Clearer Addition of Extras</h3>
+          <div class="spaced-content">
+            <p>
+              A dedicated extras modal was introduced to offer clear
+              descriptions and pricing, with the booking summary dynamically
+              updating to show the total cost as extras are added or removed.
+            </p>
+          </div>
+          <img
+            src="assets/images/extras.png"
+            alt="Clear extras modal with dynamic pricing updates"
+          />
+        </section>
+
+        <section class="subsection">
+          <!-- Improved Booking Completion Transparency -->
+          <h3>Improved Booking Completion Transparency</h3>
+          <div class="spaced-content">
+            <p>
+              A detailed booking summary was added so users could review all
+              their selections—dates, room type, and extras—before confirming
+              their booking. Editable fields allow for last-minute changes
+              without needing to restart the process.
+            </p>
+          </div>
+          <img
+            src="assets/images/booking-completion.png"
+            alt="Final booking summary with editable fields for last-minute changes"
+          />
+        </section>
       </section>
 
       <!-- EVALUATIVE TESTINGS -->
@@ -536,13 +544,12 @@
         <h2>Evaluative Testing</h2>
         <h3>User Feedback</h3>
         <div class="spaced-content">
-        <p>
-          I conducted user tests to evaluate the design's effectiveness by
-          having users book a hotel room through the prototype.
-        </p>
+          <p>
+            I conducted user tests to evaluate the design's effectiveness by
+            having users book a hotel room through the prototype.
+          </p>
         </div>
         <section class="grid-panel">
-         
           <div class="grid-container">
             <div class="grid-item">
               <span class="number">1</span>
@@ -619,21 +626,19 @@
         <!-- Further Development Section -->
         <h2>Further Development</h2>
 
-        
-          
-          <div class="further-dev-image">
-            <img
-              src="assets/images/further-development.png"
-              alt="Further Development"
-            />
-          </div>
-          <div class="spaced-content">
-            <p>
-              Based on user feedback, I identified several key areas for future
-              improvement:
-            </p>
-          </div>
-        
+        <div class="further-dev-image">
+          <img
+            src="assets/images/further-development.png"
+            alt="Further Development"
+          />
+        </div>
+        <div class="spaced-content">
+          <p>
+            Based on user feedback, I identified several key areas for future
+            improvement:
+          </p>
+        </div>
+
         <section class="grid-panel">
           <div class="grid-container">
             <div class="grid-item">
@@ -693,6 +698,20 @@
 
     <footer>
       <p>&copy; 2024 Natalie Fitzmaurice. All rights reserved.</p>
+
+      
     </footer>
+        <script>
+          var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+          xhr.open("GET", "header.html", true); // Specify the request method and file
+          xhr.onreadystatechange = function () {
+            // Define what happens when the file is loaded
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              document.getElementById("header-placeholder").innerHTML =
+                xhr.responseText; // Insert the header content
+            }
+          };
+          xhr.send(); // Send the request to load the header.html
+        </script>
   </body>
 </html>

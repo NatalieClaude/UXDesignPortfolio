@@ -1,0 +1,87 @@
+/* Contact Page Section Styling */
+.contact {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  min-height: 80vh; /* Ensures the section covers most of the screen height */
+}
+
+.contact-wrapper {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Align the Contact Me title to the left like the About Me page */
+.contact h1 {
+  font-size: 36px;
+  color: black;
+  text-align: left;  /* Align the title to the left */
+  margin-bottom: 20px;
+}
+
+.contact-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-wrapper label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-wrapper input,
+.contact-wrapper textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact-wrapper input:focus,
+.contact-wrapper textarea:focus {
+  border-color: #605dec;
+  outline: none;
+}
+
+.contact-wrapper textarea {
+  resize: vertical;
+}
+
+.contact-wrapper button {
+  padding: 12px 20px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-wrapper button:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+/* Footer Styling for Contact Page */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #373737;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+}

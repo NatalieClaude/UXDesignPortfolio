@@ -154,7 +154,7 @@ figcaption {
 }
 
 /* Header Styling - Applied to the overall header element */
-header {
+#title {
   text-align: center; /* Centers all header text */
   margin-bottom: var(
     --space-medium
@@ -167,6 +167,7 @@ header {
   color: var(--primary-color); /* Primary color for emphasis */
   margin-top: var(--space-medium);
   margin-bottom: var(--space-medium); /* Space below for better separation */
+  text-transform: uppercase;
 }
 
 /* Header Subtitle (h2) Styling */
@@ -506,12 +507,12 @@ header {
 /* 
   List Styling:
   Applies consistent styles to unordered and ordered lists
-*/
+
 ul,
 ol {
-  font-size: 18px; /* Slightly smaller font for list items */
-  color: var(--text-color); /* Matches paragraph color */
-  padding-left: 40px; /* Adds left padding for indentation */
+  font-size: 18px; /* Slightly smaller font for list items 
+  color: var(--text-color); /* Matches paragraph color 
+  padding-left: 40px; /* Adds left padding for indentation 
 }
 
 ul,
@@ -522,7 +523,7 @@ li {
 .list {
   padding-top: 10px;
 }
-
+*/
 /* Footer Styling */
 footer {
   text-align: center;

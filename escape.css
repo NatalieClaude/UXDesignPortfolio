@@ -1,0 +1,112 @@
+/* Container for sections */
+#container {
+  padding: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Case Study Title */
+.case-study-title {
+  font-size: 36px;
+  color: #605dec; /* Customize this color */
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Case Study Subtitle */
+.case-study-subtitle {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 60px;
+}
+
+.spaced-paragraph {
+  margin-bottom: 20px;
+}
+
+/* Introductory Description */
+.intro-description {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Problem & Process Text Styles */
+.text-content h3 {
+  font-size: 28px;
+  color: #605dec; /* Customize the color for headings */
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Text-Image Layout */
+.text-image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.text-image-row, .image-text-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-content {
+  flex: 1;
+  text-align: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.custom-caption {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #999;
+}
+
+/* Research Image Row */
+.research-image {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Spaced content between sections */
+.spaced-content {
+  margin-bottom: 40px;
+}
+
+/* Full-width Images */
+.full-width {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #373737;
+  color: white;
+}

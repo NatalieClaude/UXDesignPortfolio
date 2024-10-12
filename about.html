@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Natalie Fitzmaurice</title>
+
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Link to external stylesheet for About page -->
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+
+    <!-- Header placeholder for dynamic loading -->
+    <div id="header-placeholder"></div>
+
+    <!-- About Me Content -->
+    <div class="about-container">
+        <h1>About Me</h1>
+
+        <p>
+            I graduated from the <span class="highlight">MSc Interactive Media</span> at
+            University College Cork, Ireland, in March 2023, where I discovered my passion for
+            <span class="highlight">Human-Computer Interaction (HCI)</span>.
+        </p>
+
+        <h2 class="section-title">Thesis Project</h2>
+        <p>
+            My thesis project focused on increasing engagement among children at the Cork Public Museum.
+            I designed and developed an interactive, tangible, mixed reality escape room tailored to
+            complement a specific museum exhibition. The game incorporated <span class="highlight">Tangibles</span>
+            to engage children and link the on-site museum experience with an interactive post-visit app.
+        </p>
+
+        <h2 class="section-title">Further Education</h2>
+        <p>
+            To further my skills and knowledge in <span class="highlight">HCI</span>, I completed a
+            <span class="highlight">Professional Diploma in UX Design</span> from the UX Design Institute, Ireland,
+            in October 2023. My final project focused on improving and redesigning the online hotel booking experience.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Natalie Fitzmaurice. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to load the header -->
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "header.html", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById("header-placeholder").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    </script>
+
+</body>
+
+</html>

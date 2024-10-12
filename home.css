@@ -13,7 +13,7 @@ body {
   overscroll-behavior: none;
 }
 
-/* Header Styling */
+ /* Header Styling   */
 header {
   display: flex;
   justify-content: space-between;
@@ -47,6 +47,8 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #605dec; /* Purple hover effect */
 }
+
+
 
 /* Main Section Styling */
 .intro {

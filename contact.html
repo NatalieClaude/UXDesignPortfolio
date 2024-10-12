@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Natalie Fitzmaurice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="contact.css" />
+
+</head>
+
+<body>
+
+<!-- Header placeholder where the header will be loaded -->
+<div id="header-placeholder"></div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        
+        <div class="contact-wrapper">
+            <h1>Contact Me</h1>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Natalie Fitzmaurice. All rights reserved.</p>
+    </footer>
+
+   
+<script>
+    var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+    xhr.open("GET", "header.html", true); // Specify the request method and file
+    xhr.onreadystatechange = function () {
+        // Define what happens when the file is loaded
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("header-placeholder").innerHTML =
+                xhr.responseText; // Insert the header content
+        }
+    };
+    xhr.send(); // Send the request to load the header.html
+</script>
+</body>
+
+</html>
