@@ -84,7 +84,7 @@ h2 {
   padding-bottom: var(
     --space-medium
   ); /* Adds padding to visually separate heading from the content */
-  border-bottom: 2px solid var(--primary-color); /* Adds underline for emphasis */
+  border-bottom: 2px solid black; /* Adds underline for emphasis */
 }
 
 /* Global Heading (h3) Styling */
@@ -163,8 +163,8 @@ figcaption {
 
 /* Header Title (h1) Styling */
 .case-study-title {
-  font-size: 6em; /* Adjusted font size to be relative */
-  color: var(--primary-color); /* Primary color for emphasis */
+  font-size: 4em; /* Adjusted font size to be relative */
+  color: Black; /* Primary color for emphasis */
   margin-top: var(--space-medium);
   margin-bottom: var(--space-medium); /* Space below for better separation */
   text-transform: uppercase;
@@ -176,7 +176,7 @@ figcaption {
     --subheading-color,
     #3f3d56
   ); /* Lighter color for subtitle, with a fallback */
-  font-size: 2.5em; /* Slightly smaller than h1 */
+  font-size: 2em; /* Slightly smaller than h1 */
   margin-bottom: 0; /* No extra space to keep compact */
 }
 
