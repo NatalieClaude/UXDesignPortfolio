@@ -6,29 +6,26 @@
     <title>Escape The Musuem Case Study</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet" />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="escape-museum.css" />
-    
-    
-
   </head>
 
-  
-
   <body>
-
     <!-- Header placeholder -->
     <div id="header-placeholder"></div>
 
-    
     <section id="container">
       <!-- Case Study Header -->
       <section id="title">
         <h1 class="case-study-title">Escape The Musuem</h1>
-        <h2 class="case-study-subtitle">A Post-Visit Tangible Escape Room with AR for Mobile.</h2>
+        <h2 class="case-study-subtitle">
+          A Post-Visit Tangible Escape Room with AR for Mobile.
+        </h2>
       </section>
 
       <!-- Introduction Section -->
@@ -41,8 +38,9 @@
           class="intro-image"
         />
         <p class="intro-description">
-          Escape The Museum is a mobile escape room app for the Cork Public Museum that combines Augmented Reality (AR) with Tangibles, designed for
-          primary school children.
+          Escape The Museum is a post-visit mobile escape room app developed for
+          the Cork Public Museum, combining Augmented Reality (AR) with tangible
+          elements, for primary school children.
         </p>
       </section>
 
@@ -50,9 +48,9 @@
       <section id="homepage-image" class="section">
         <figure>
           <img
-            src="assets/images/Stay.comMockUp.png"
+            src="assets/images/EscapeNoBGMock.png"
             alt="Stay.com final design homepage"
-            class="full-width"
+            class="full-width bordered-image"
           />
           <figcaption>Escape The Museum: Main Interface</figcaption>
         </figure>
@@ -67,24 +65,38 @@
             <div class="text-content">
               <h3>The Problem</h3>
               <p class="spaced-paragraph">
-              Many museum post-visit experiences and tools lack interactivity, failing to keep children engaged and connected to the
-              artefacts after leaving the site. This limits the museum's ability to foster continued engagement and encourage return
-              visits.
+                The Cork Public Museum, like many museums, faces challenges in
+                sustaining visitor engagement both during and after their visit,
+                particularly among younger audiences. The post-visit phase
+                presents significant potential for enhancing engagement, yet
+                current tools are generally static and lack the interactivity
+                needed to foster an ongoing connection with visitors.
               </p>
 
               <p>
-              The goal was to create a highly engaging, interactive, post-visit app that seamlessly connects the on-site and post-visit experience,
-              using engaging and intuitive design to enhance learning, foster engagement, and encourage return visits.
+                This gap offers a valuable opportunity to strengthen engagement
+                by focusing on the post-visit experience and introducing an
+                interactive tool that keeps visitors connected long after they
+                leave. Addressing this need could not only encourage return
+                visits but also establish a model for similar institutions.
               </p>
             </div>
             <div class="image-content">
               <img
-                src="assets/images/problem.png"
+                src="assets/images/problem-green.png"
                 alt="Visualization of the usability problems in hotel booking sites"
                 class="image"
               />
             </div>
           </div>
+
+          <h3>The Goal</h3>
+          <p class="spaced-paragraph">
+            The goal was to create an engaging, interactive post-visit app that
+            bridges the on-site and post-visit experience. Designed as a fun,
+            game-like tool, the app aims to enhance on-site engagement, sustain
+            interest after the visit, and encourage visitors to return.
+          </p>
 
           <!-- Process subsection -->
 
@@ -104,13 +116,18 @@
             <div class="text-content">
               <h3>The Process</h3>
               <p class="spaced-paragraph">
-            User research, including curator interviews, on-site observations, and academic studies, was synthesised and prioritised
-            using affinity mapping and MoSCoW, defining key design areas.
+                To develop this concept, I conducted user research, including
+                curator interviews, on-site observations, and a comprehensive
+                literature review of prior work. The insights were synthesised
+                and prioritised using affinity mapping and MoSCoW prioritisation
+                to define key design requirements.
               </p>
 
               <p>
-                Low-fidelity sketches and user flow diagrams shaped early decisions, leading to a prototype built with Unity and
-                Vuforia, which was tested and refined for further development.
+                Early design concepts were shaped with low-fidelity sketches and
+                user flow diagrams, leading to an interactive prototype built
+                with Unity and Vuforia. This prototype underwent evaluative
+                testing, revealing several areas for further development.
               </p>
             </div>
           </div>
@@ -126,11 +143,23 @@
 
         <!-- Subheading and Text -->
         <div class="spaced-content">
-          <h3>Research: Approach and Methods</h3>
+          <h3>Research Gap</h3>
           <p>
-            To ensure credible findings, I used triangulation, combining curator interviews, on-site observations, and academic
-            research. This cross-referenced data identified patterns and solidified insights, ensuring design decisions were
-            grounded in thorough research.
+            A literature review highlighted a clear gap: the need for a dynamic,
+            interactive post-visit tool in museums. While the post-visit phase
+            has untapped potential to boost visitor engagement, existing tools
+            mainly focus on either interactive on-site experiences or static
+            post-visit resources. This reveals a distinct opportunity for a more
+            engaging, interactive solution specifically aimed at the post-visit
+            experience.
+          </p>
+          <h3>Approach and Methods</h3>
+          <p>
+            To ensure credible findings, I applied triangulation—combining
+            curator interviews, on-site observations, and academic research to
+            identify patterns and solidify insights. This triangulated approach
+            grounded the design decisions in comprehensive research and
+            cross-referenced data.
           </p>
         </div>
 
@@ -153,13 +182,6 @@
             class="research-image"
           />
         </div>
-        <div>
-          <h3>Research Gap</h3>
-          <p>Previous research shows the significant potential of the post-visit phase to boost visitor engagement, but current tools
-          focus on on-site tech or static designs, revealing a gap and a clear need for a dynamic, interactive post-visit tool for
-          museums.</p>
-
-        </div>
       </section>
 
       <!-- Analysis Section -->
@@ -169,34 +191,30 @@
           <div class="spaced-content">
             <h2>Analysis</h2>
             <!-- Subheading and Text -->
-            <h3>Analysis: Techniques and Findings</h3>
+            <h3>Techniques: Affinity Mapping and MoSCoW Prioritisation</h3>
 
             <!-- Text Overview -->
-
-            <p>
-              Using affinity mapping and MoSCoW prioritisation, 
-              I synthesised the research data into several key design requirements, 
-              which significantly influenced the final design.
-            </p>
-          </div>
-
-          <div class="image-row">
-            <img
-              src="assets/images/affinity-mapping.png"
-              alt="Affinity Map"
-              class="analysis-image"
-            />
-
-            <img
-              src="assets/images/customer-journey.png"
-              alt="Customer Journey Map"
-              class="analysis-image"
-            />
+                <div class="text-image-row">
+                  <div class="text-content">
+                    <p class="spaced-paragraph">
+                      Using affinity mapping and MoSCoW prioritisation, I organised
+                      the research data into several key design requirements that
+                      guided the final design.
+                    </p>
+                  </div>
+                  <div class="image-content">
+                    <img src="assets/images/affinity-mapping.png" alt="Visualization of the usability problems in hotel booking sites"
+                      class="image" />
+                  </div>
+                </div>
           </div>
         </section>
 
         <!-- Findings Section -->
         <h3>Key Findings: Primary Design Requirements</h3>
+        <p class="spaced-paragraph">
+          The design should aim to fulfil the following objectives:
+        </p>
         <section class="grid-panel subsection">
           <div class="grid-container">
             <!-- Repeated grid items -->
@@ -205,7 +223,8 @@
               <div>
                 <h4>Bridge The Gap Dynamically</h4>
                 <p>
-                  Use dynamic, interactive elements to connect on-site and post-visit.
+                  Integrate interactive elements that connect the on-site and
+                  post-visit experiences.
                 </p>
               </div>
             </div>
@@ -215,8 +234,8 @@
               <div>
                 <h4>Encourage On-Site Exploration</h4>
                 <p>
-                Encouraging on-site exploration fosters deeper visitor engagement, enhances learning, and creates a more interactive and
-                memorable museum experience.
+                  Foster exploration to enhance engagement and make the museum
+                  visit more interactive and memorable.
                 </p>
               </div>
             </div>
@@ -226,8 +245,9 @@
               <div>
                 <h4>Reinforce Visitor Memory</h4>
                 <p>
-                  Research showed that reinforcing a visitor's memory of their museum visit strengthens emotional connections, encourages return visits,
-                  promotes word-of-mouth, and deepens ongoing engagement with the museum.
+                  Strengthen visitors' memories of their experience to build
+                  emotional connections, promote return visits, and deepen
+                  engagement.
                 </p>
               </div>
             </div>
@@ -237,8 +257,8 @@
               <div>
                 <h4>Ensure Cost-Effectiveness</h4>
                 <p>
-                  The tool must be cost-effective for both the museum and visitors, as the museum is a small, local institution supported
-                  by local authority funding and offers free access to the public.
+                  Keep costs low for both the museum and visitors, as it is a
+                  small, locally-funded institution with free public access.
                 </p>
               </div>
             </div>
@@ -248,7 +268,8 @@
               <div>
                 <h4>Minimise Distractions On-Site</h4>
                 <p>
-                  Minimising distractions ensures visitors stay focused on exhibits, enhancing engagement and immersion.
+                  Ensure visitors remain focused on exhibits, enhancing
+                  immersion.
                 </p>
               </div>
             </div>
@@ -258,8 +279,9 @@
               <div>
                 <h4>Include A Challenge</h4>
                 <p>
-                  An experience with a challenge/game, or sense of compeition, would have much more impact on children
-                  than one without.
+                  Add a game element to make the experience impactful for
+                  children, with an interactive, competitive component likely to
+                  engage them more effectively.
                 </p>
               </div>
             </div>
@@ -271,99 +293,59 @@
 
       <section id="design" class="section">
         <h2>Design</h2>
-        <h3>Design Goals</h3>
-
-        <section class="grid-panel subsection">
-          <div class="grid-container">
-            <!-- Repeated grid items -->
-            <div class="grid-item">
-              <span class="number">1</span>
-              <div>
-                <h4>Escape Room Game/Concept</h4>
-                <p>
-                  The concept of an Escape Room provided a great opportunity to engage children.
-                </p>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <span class="number">2</span>
-              <div>
-                <h4>Tangibles</h4>
-                <p>
-                  Link the on-site and post-visit experiences with an experience that falls across
-                  the two stages. Reinforce this connection through the use of Tangibles designed to be used
-                  in both.
-                </p>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <span class="number">3</span>
-              <div>
-                <h4>On-site part of the game</h4>
-                <p>
-                  Integrating/beginning the game into the on-site part of the experience
-                  allowed the encouragement of childrent to exlore the exhibition.
-                </p>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <span class="number">4</span>
-              <div>
-                <h4>Tokens of Memory</h4>
-                <p>
-                  The Tangibles had a dual function of linking the two phases, but also served as 
-                  memory tokens of the 
-                </p>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <span class="number">5</span>
-              <div>
-                <h4>Optimised Extras Selection</h4>
-                <p>
-                  Provide clear descriptions, transparent pricing, and
-                  consistent options to streamline the process of adding extras.
-                </p>
-              </div>
-            </div>
-
-            <div class="grid-item">
-              <span class="number">6</span>
-              <div>
-                <h4>Transparent Booking Completion</h4>
-                <p>
-                  Ensure transparency in the final steps with a clear summary
-                  for user confirmation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <!-- Sketches Sub-Section -->
         <section class="text-image-grid">
-          <div class="text-image-row">
+          <div class="image-text-row">
+            <div class="image-content">
+              <figure>
+                <img
+                  src="assets/images/escape-user-flow.png"
+                  alt="The design process diagram"
+                  class="user-flow-image"
+                />
+                <figcaption>User Journey</figcaption>
+              </figure>
+            </div>
             <div class="text-content">
-              <h3>Sketches</h3>
+              <h3>User Journey Mapping</h3>
               <p class="spaced-paragraph">
-                I began by sketching out design ideas based on the issues
-                identified in the analysis.
+                Recognising that the visitor journey spans both on-site and
+                post-visit phases, I began by mapping the user’s path as they
+                move from the on-site experience to the post-visit app.
+              </p>
+              <p class="spaced-paragraph">
+                The escape room experience begins on-site, where visitors
+                collect clues in the form of four tangible items, along with
+                instructions to locate and learn about specific museum
+                artefacts.
+              </p>
+              <p class="spaced-paragraph">
+                After their museum visit, they open the app to continue the
+                experience, scanning AR codes on the tangible items to unlock
+                game features. Successfully completing the game marks a win,
+                while unsuccessful attempts encourage a return visit.
               </p>
 
               <p>
-                These sketches allowed me to quickly visualise the booking flow,
-                user interface, and layout, helping to spot and address
-                potential problems early in the process.
+                These iterative sketches helped refine the app’s flow and
+                allowed for rapid design adjustments.
+              </p>
+            </div>
+          </div>
+
+          <div class="text-image-row">
+            <div class="text-content">
+              <h3>App User Flow</h3>
+              <p class="spaced-paragraph">
+                A detailed user flow for the app itself further refines the
+                visitor’s journey, identifying areas for improvement.
               </p>
             </div>
 
             <div class="image-content">
               <img
-                src="assets/images/sketches.jpg"
+                src="assets/images/lo-fi-prototype-1.png"
                 alt="Visualisation of the usability problems in hotel booking sites"
                 class="image"
               />
@@ -376,18 +358,23 @@
             <div class="image-content">
               <figure>
                 <img
-                  src="assets/images/escape-user-flow.png"
+                  src="assets/images/lo-fi-prototype-2.png"
                   alt="The design process diagram"
                   class="user-flow-image"
                 />
-                <figcaption>User Flow Diagram</figcaption>
+                <figcaption>Sketches</figcaption>
               </figure>
             </div>
             <div class="text-content">
-              <h3>User Flow Diagram</h3>
+              <h3>Sketches and Prototyping</h3>
+              <p class="spaced-paragraph">
+                Early hand sketches visualised elements like the user interface
+                and layout, followed by low-fidelity wireframes in Miro.
+              </p>
+
               <p>
-                Next, I created user-flow diagram to work out the user's path as they moved from on-site to the post-visit.
-                This also helped identify problems early on and iterate quickly.
+                These iterative sketches helped refine the app’s flow and
+                allowed for rapid design adjustments.
               </p>
             </div>
           </div>
@@ -397,40 +384,53 @@
       <!-- Prototyping Section -->
 
       <section id="prototyping" class="section">
-        <h2>Prototyping</h2>
+        <h2>Prototyping and Implementation</h2>
 
         <p class="spaced-paragraph">
-          I sketched out early, low-fidelity wireframes of the post-visit app using Miro, to work out the flow 
-          of the design. 
+          The app was developed using Unity for its robust game development
+          features, ideal for a smooth and engaging mobile experience, and
+          Vuforia to enable AR functionality. Unity’s flexibility supported the
+          app’s 2D game components, while Vuforia provided AR features that
+          enhanced the interactive elements.
         </p>
 
-       
-
         <figure>
-            <img
-              src="assets/images/lo-fi-prototype-1.png"
-              alt="Figma Prototype"
-              class="full-width mt-small mb-medium"
-            />
-         
+          <img
+            src="assets/images/EscapeMockUp.png"
+            alt="Figma Prototype"
+            class="full-width mt-small mb-medium"
+          />
+
           <figcaption>Prototype: Homepage</figcaption>
         </figure>
-         
       </section>
 
       <section id="design-solutions" class="section">
         <!-- Design Solutions Breakdown Section -->
         <h2>Design Solutions Breakdown</h2>
+        <p>
+          The design solutions directly address the museum’s primary needs of
+          connecting the on-site and post-visit phases, enhancing engagement,
+          encouraging exploration, reinforcing memory, and being budget-friendly
+          for a small, publicly funded institution.
+        </p>
 
         <section class="subsection">
           <!-- Streamlined Interface Design -->
-          <h3>Streamlined Interface Design</h3>
+          <h3>On-Site to Post-Visit Experience</h3>
           <div class="spaced-content">
+            <p class="spaced-paragraph">
+              Visitors begin by collecting clues in the form of four tangibles
+              and instructions. This on-site task encourages exploration by
+              guiding them to specific artefacts, enhancing interaction with the
+              exhibits and creating memorable learning moments.
+            </p>
+
             <p>
-              The simplified interface was designed to prioritise key booking
-              elements, reducing cognitive load for users. By minimising
-              clutter, the design allowed users to focus on essential tasks,
-              resulting in a more intuitive and efficient booking process.
+              Post-visit, they open the app and scan AR codes on the tangibles
+              to unlock digital game features, bridging on-site and digital
+              experiences in a dynamic, engaging way that sustains their
+              interest even after leaving the museum.
             </p>
           </div>
 
@@ -442,34 +442,101 @@
 
         <section class="subsection">
           <!-- Optimised Flow Design with Progressive Disclosure -->
-          <h3>Optimised Flow Design with Progressive Disclosure</h3>
+          <h3>Tangibles</h3>
           <div class="spaced-content">
-            <p>
-              The booking flow was restructured using progressive disclosure,
-              guiding users step-by-step through the process. Breadcrumb
-              navigation was added to help users track their progress and
-              backtrack easily without confusion.
+            <p class="spaced-paragraph">
+              Each tangible is a low-fidelity, hand-made item resembling a
+              specific museum artefact, designed to connect the on-site and
+              digital experiences. These tangible items serve as clues on-site
+              and as AR keys in the post-visit app.
+            </p>
+            <p class="spaced-paragraph">
+              Designed as static items, they minimise on-site distractions
+              without detracting from the exhibit experience.
+            </p>
+
+            <p class="spaced-paragraph">
+              Because they resemble the artefacts, the tangibles reinforce
+              memories of the on-site visit through hands-on interaction in the
+              post-visit app.
+            </p>
+
+            <p class="spaced-paragraph">
+              Additionally, these tokens are cost-effective; they are small,
+              simple items that the museum can produce affordably while still
+              creating a meaningful connection for visitors.
             </p>
           </div>
           <img
-            src="assets/images/flow.png"
+            src="assets/images/tangible-anatomy.png"
             alt="Optimized booking flow design with breadcrumb navigation"
           />
         </section>
 
         <section class="subsection">
           <!-- Enhanced Search Functionality -->
-          <h3>Enhanced Search Functionality</h3>
+          <h3>Post-Visit App Features</h3>
           <div class="spaced-content">
             <p>
-              The calendar and map were designed using proven, familiar elements
-              to make hotel searches easier and more intuitive. The interactive
-              calendar offers real-time feedback with hover highlights, and the
-              map dynamically updates hotel locations based on user
-              selection—bringing together well-known tools for a smooth and
-              seamless booking experience.
+              The app further sustains engagement with an escape-room-style
+              game, fostering ongoing interaction in a playful, competitive way,
+              accessible directly on visitors' own mobile devices, ensuring
+              cost-effectiveness by eliminating the need for extra equipment.
             </p>
           </div>
+          <div class="margin-top">
+            <h4>App Interface Design</h4>
+            <p class="spaced-paragraph">
+              A cartoon-style 2D room with hidden clues, interactive furniture,
+              and a camera for AR mode provides a vibrant, intuitive layout that
+              keeps children engaged.
+            </p>
+            <img
+              src="assets/images/search-functionality.png"
+              alt="Improved search functionality with interactive calendar and map"
+            />
+          </div>
+
+          <div class="margin-top">
+            <h4>AR Feature</h4>
+            <p class="spaced-paragraph">
+              The camera enables users to scan tangible AR codes to access
+              artefact-related quiz questions, linking physical items to digital
+              content and reinforcing the museum experience.
+            </p>
+            <img
+              src="assets/images/search-functionality.png"
+              alt="Improved search functionality with interactive calendar and map"
+            />
+          </div>
+
+          <h4>Quiz</h4>
+          <p class="spaced-paragraph">
+            Each AR code scan prompts a quiz question. Correct answers allow the
+            user to continue through all questions, while incorrect answers lock
+            the game, encouraging a museum revisit.
+          </p>
+          <img
+            src="assets/images/search-functionality.png"
+            alt="Improved search functionality with interactive calendar and map"
+          />
+
+          <h4>Escape Mechanism</h4>
+          <p class="spaced-paragraph">
+            Solving all four clues provides a virtual key, allowing players to
+            “escape” and complete the game in a satisfying way, further
+            encouraging participation.
+          </p>
+          <img
+            src="assets/images/search-functionality.png"
+            alt="Improved search functionality with interactive calendar and map"
+          />
+
+          <h4>Timer And Scoreboard</h4>
+          <p class="spaced-paragraph">
+            A 5-minute countdown and scoreboard add a competitive edge,
+            motivating players to improve their scores with each play.
+          </p>
           <img
             src="assets/images/search-functionality.png"
             alt="Improved search functionality with interactive calendar and map"
@@ -687,20 +754,18 @@
 
     <footer>
       <p>&copy; 2024 Natalie Fitzmaurice. All rights reserved.</p>
-
-      
     </footer>
-        <script>
-          var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
-          xhr.open("GET", "header.html", true); // Specify the request method and file
-          xhr.onreadystatechange = function () {
-            // Define what happens when the file is loaded
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              document.getElementById("header-placeholder").innerHTML =
-                xhr.responseText; // Insert the header content
-            }
-          };
-          xhr.send(); // Send the request to load the header.html
-        </script>
+    <script>
+      var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
+      xhr.open("GET", "header.html", true); // Specify the request method and file
+      xhr.onreadystatechange = function () {
+        // Define what happens when the file is loaded
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          document.getElementById("header-placeholder").innerHTML =
+            xhr.responseText; // Insert the header content
+        }
+      };
+      xhr.send(); // Send the request to load the header.html
+    </script>
   </body>
 </html>
