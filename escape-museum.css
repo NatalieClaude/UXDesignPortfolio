@@ -16,7 +16,7 @@
   These variables define common colors and spacing values for consistency.
 */
 :root {
-  --primary-color: #2C7281; /* Main accent color: used for page title and section titles */
+  --primary-color: #2c7281; /* Main accent color: used for page title and section titles */
   --subheading-color: #3f3d56; /* Subheading color: used for subheadings */
   --text-color: #555; /* Default text color */
   --heading-color: #333; /* Main heading text color */
@@ -99,9 +99,8 @@ h4 {
   font-size: 1.3em;
   color: var(--subtitle-color);
   margin-bottom: var(--space-small);
- /* padding: var(--space-micro);
+  /* padding: var(--space-micro);
    border-bottom: 2px dashed var(--primary-color); */
- 
 }
 
 /* Global Image Styling */
@@ -134,7 +133,6 @@ figcaption {
 }
 
 .section {
-  
   margin-bottom: 120px;
 }
 
@@ -185,13 +183,12 @@ figcaption {
 /* Container for Introduction Section */
 #intro {
   width: 100%; /* Take up the full width of the page */
- /* padding: var(--space-extralarge) 0;  Adds some padding at the top and bottom */
+  /* padding: var(--space-extralarge) 0;  Adds some padding at the top and bottom */
   display: flex; /* Arrange children in a row (side by side) */
   align-items: center; /* Vertically center the content */
   gap: var(--space-small); /* Adds space between the image and the text */
   max-width: 1200px; /* Limit the maximum width of the content for better readability */
   margin: var(--space-large) auto; /* Centers the content within the section */
- 
 }
 
 /* Image Styling */
@@ -204,8 +201,7 @@ figcaption {
 }
 
 .bordered-image {
- border: 2px solid var(--primary-color);
- 
+  border: 2px solid var(--primary-color);
 }
 
 /* Text Styling */
@@ -235,14 +231,12 @@ figcaption {
 
 /* Final Design Image */
 
-
 /* Full-Width Image Styling */
 .full-width {
   width: 100%; /* Ensure image takes full width */
   height: auto; /* Maintain the aspect ratio */
   object-fit: contain; /* Ensure the image does not get distorted */
 }
-
 
 /* Text-Image-Grid Section */
 .text-image-grid {
@@ -268,8 +262,6 @@ figcaption {
     --space-extralarge
   ); /* Adds vertical space below the problem section 
 }*/
-
-
 
 /* Text Content Styling */
 .text-content {
@@ -306,13 +298,10 @@ figcaption {
 
 /* *** Research Section Styling *** 
 
-#research {
-  /* margin: var(--space-small) 0;  Use variable for consistent vertical spacing
-}
 
- */
 
-/* Research Images */
+/* Images in a row */
+
 .image-row {
   display: flex;
   justify-content: space-between;
@@ -320,12 +309,12 @@ figcaption {
 }
 
 /* Responsive Image Styling */
-.research-image {
+.image-row-image {
   flex: 1;
   object-fit: cover; /* Ensures image fills the container while maintaining aspect ratio */
   width: 100%; /* Allow the image to scale to the container's width */
   max-width: calc(
-    33.33% - (var(--space-small))
+    50% - (var(--space-small))
   ); /* Allow each image to take up a maximum of 33% of the container */
   height: auto; /* Maintain the aspect ratio */
   max-height: 400px; /* Set a maximum height to avoid large images */
@@ -347,7 +336,6 @@ figcaption {
     height: auto; /* Maintain aspect ratio */
   }
 }
-
 
 .spaced-content {
   margin-bottom: var(--space-medium);
@@ -371,6 +359,9 @@ figcaption {
   gap: var(--space-small);
 }
 
+
+
+
 /* Image Styling */
 .analysis-image {
   flex: 1;
@@ -389,60 +380,47 @@ figcaption {
   justify-content: center; /* Centers content inside grid-panel */
   padding: var(--space-large);
   border-radius: 10px;
-  background-color: var(--primary-color); /* 50% transparent primary color */
+  border: 2px dashed var(--primary-color);
 }
-
-
 
 /* Findings Container Styling */
 
 .grid-container {
- display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
   gap: var(--space-small);
   max-width: 1000px; /* Set max width to control centering */
   margin: 0 auto; /* Center the grid-container */
-
+  border-radius: 10px;
 }
-
-
-
-
 
 .grid-item {
   display: flex;
   flex-direction: column;
   margin: var(--space-small);
-  background-color: white;
+  /* background-color: var(--primary-color); */
   border-radius: 10px;
   padding: var(--space-small);
+  border: 1px dashed var(--primary-color);
 }
 
 .header-row {
   display: flex;
   align-items: flex-start; /* Align number and heading on the same line */
   width: 100%; /* Ensure it takes full width of grid-item */
-  
- 
 }
 
 .number {
   margin-right: 10px;
 }
 
-
-
-
-
 /* Target only the paragraph inside .grid-item */
 .grid-item p {
-  
   line-height: 1.6;
   font-size: var(--p-fontsize);
   color: var(--text-color);
   margin: 0;
   padding-top: 10px;
-  
 }
 
 .grid-item h4 {
@@ -551,11 +529,20 @@ li {
   padding-top: 10px;
 }
 */
+
+.centered-indented-list {
+  display: inline-block;
+  text-align: left;
+  list-style-position: inside;
+  margin: 0 auto; /* Center on the page */
+  padding-left: 40px; /* Increase this value for more indentation */
+}
+
 /* Footer Styling */
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: #3F3D56; /* Use your preferred color */
+  background-color: #3f3d56; /* Use your preferred color */
   margin-top: 50px; /* Space above the footer */
 }
 
