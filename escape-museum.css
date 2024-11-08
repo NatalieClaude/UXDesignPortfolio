@@ -99,8 +99,8 @@ h4 {
   font-size: 1.3em;
   color: var(--subtitle-color);
   margin-bottom: var(--space-small);
-  padding: var(--space-micro);
-  /* border-bottom: 2px dashed var(--primary-color); */
+ /* padding: var(--space-micro);
+   border-bottom: 2px dashed var(--primary-color); */
  
 }
 
@@ -204,9 +204,8 @@ figcaption {
 }
 
 .bordered-image {
+ border: 2px solid var(--primary-color);
  
- /* background-color: #3F3D56; */
-   background-color: lightgray; 
 }
 
 /* Text Styling */
@@ -263,12 +262,12 @@ figcaption {
   flex-wrap: wrap; /* Allows elements to stack in smaller viewports */
 }
 
-/* Add vertical space between the Problem Section and the Process Section */
+/* Add vertical space between the Problem Section and the Process Section 
 .text-image-row {
   margin-bottom: var(
     --space-extralarge
-  ); /* Adds vertical space below the problem section */
-}
+  ); /* Adds vertical space below the problem section 
+}*/
 
 
 
@@ -386,54 +385,71 @@ figcaption {
 }
 
 .grid-panel {
+  display: flex;
+  justify-content: center; /* Centers content inside grid-panel */
   padding: var(--space-large);
   border-radius: 10px;
   background-color: var(--primary-color); /* 50% transparent primary color */
 }
 
+
+
 /* Findings Container Styling */
+
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(3, auto); /* 3 rows */
-   /* Makes it responsive */
-  gap: var(--space-small); /* Consistent spacing between items */
+ display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
+  gap: var(--space-small);
+  max-width: 1000px; /* Set max width to control centering */
+  margin: 0 auto; /* Center the grid-container */
+
 }
+
+
+
 
 
 .grid-item {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   margin: var(--space-small);
   background-color: white;
   border-radius: 10px;
-  padding: var(--space-small)
+  padding: var(--space-small);
 }
 
-/* Styling for the Number Circle */
-.number {
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 50%;
-  border: 2px solid var(--primary-color);
-  width: 40px;
-  height: 40px;
+.header-row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin-right: var(
-    --space-small
-  ); /* Adds consistent spacing between number and text */
-  flex-shrink: 0; /* Prevent the number from shrinking */
+  align-items: flex-start; /* Align number and heading on the same line */
+  width: 100%; /* Ensure it takes full width of grid-item */
+  
+ 
 }
 
-/* Styling for the paragraph text inside grid container */
-.grid-container p {
-  color: var(--subtitle-color);
+.number {
+  margin-right: 10px;
 }
 
+
+
+
+
+/* Target only the paragraph inside .grid-item */
+.grid-item p {
+  
+  line-height: 1.6;
+  font-size: var(--p-fontsize);
+  color: var(--text-color);
+  margin: 0;
+  padding-top: 10px;
+  
+}
+
+.grid-item h4 {
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Ensures text doesn’t overflow the container */
+  margin-bottom: 0;
+}
 /* DESIGN SECTION */
 
 /* #design{ 
