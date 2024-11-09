@@ -201,7 +201,11 @@ figcaption {
 }
 
 .bordered-image {
-  border: 2px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.padded-image {
+  padding: 50px;
 }
 
 /* Text Styling */
@@ -338,7 +342,7 @@ figcaption {
 }
 
 .spaced-content {
-  margin-bottom: var(--space-medium);
+  margin-bottom: var(--space-large);
 }
 
 .margin-top {
@@ -529,6 +533,12 @@ li {
   padding-top: 10px;
 }
 */
+
+.requirements-note {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
 
 .centered-indented-list {
   display: inline-block;
