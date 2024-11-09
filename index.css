@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+
+
+
 body {
   font-family: "Open Sans", sans-serif; /* Apply the Open Sans font */
   line-height: 1.6;
@@ -12,6 +15,7 @@ body {
   color: #333;
   overscroll-behavior: none;
 }
+
 
  /* Header Styling   */
 header {
@@ -78,7 +82,7 @@ header nav ul li a:hover {
   object-fit: cover;
   object-position: center top; /* Shift the image down within the circle */
   margin-right: 40px; /* Space between image and text */
-  border: 1px solid black;
+  border: 2px solid lightgrey;
 }
 
 /* Text Styling */

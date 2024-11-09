@@ -14,7 +14,7 @@
     />
 
     <!-- Link to external stylesheet for About page -->
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="about.css" />
   </head>
 
@@ -77,16 +77,8 @@
     </footer>
 
     <!-- Script to load the header -->
-    <script>
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", "header.html", true);
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          document.getElementById("header-placeholder").innerHTML =
-            xhr.responseText;
-        }
-      };
-      xhr.send();
-    </script>
+    <script src="main.js"></script>
+
+
   </body>
 </html>

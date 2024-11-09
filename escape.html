@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="escape-museum.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="escape.css" />
   </head>
 
   <body>
@@ -767,17 +767,8 @@
     <footer>
       <p>&copy; 2024 Natalie Fitzmaurice. All rights reserved.</p>
     </footer>
-    <script>
-      var xhr = new XMLHttpRequest(); // Create a new XMLHttpRequest object
-      xhr.open("GET", "header.html", true); // Specify the request method and file
-      xhr.onreadystatechange = function () {
-        // Define what happens when the file is loaded
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          document.getElementById("header-placeholder").innerHTML =
-            xhr.responseText; // Insert the header content
-        }
-      };
-      xhr.send(); // Send the request to load the header.html
-    </script>
+   
+    <script src="main.js"></script>
+
   </body>
 </html>
