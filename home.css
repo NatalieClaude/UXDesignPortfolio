@@ -8,7 +8,7 @@
 body {
   font-family: "Open Sans", sans-serif; /* Apply the Open Sans font */
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color:  lightgrey;
   color: #333;
   overscroll-behavior: none;
 }
@@ -45,7 +45,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #605dec; /* Purple hover effect */
+  color: grey; /* Purple hover effect */
 }
 
 
@@ -58,6 +58,9 @@ header nav ul li a:hover {
   align-items: center;
   background-color: #fafafa;
 }
+
+
+
 
 .content-wrapper {
   display: flex;
@@ -75,6 +78,7 @@ header nav ul li a:hover {
   object-fit: cover;
   object-position: center top; /* Shift the image down within the circle */
   margin-right: 40px; /* Space between image and text */
+  border: 1px solid black;
 }
 
 /* Text Styling */
@@ -92,7 +96,7 @@ header nav ul li a:hover {
 
 .text .highlight {
   font-size: 20px;
-  color: #605dec; /* Purple highlight for subtext */
+  color: #555; /* Purple highlight for subtext */
 }
 
 /* Work Section Styling */
@@ -103,7 +107,7 @@ header nav ul li a:hover {
 
 .work h2 {
   font-size: 28px;
-  color: #605dec;
+  color: #555;
   margin-bottom: 30px;
 }
 

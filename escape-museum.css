@@ -174,7 +174,7 @@ figcaption {
     --subheading-color,
     #3f3d56
   ); /* Lighter color for subtitle, with a fallback */
-  font-size: 2em; /* Slightly smaller than h1 */
+  font-size: 2.2em; /* Slightly smaller than h1 */
   margin-bottom: 0; /* No extra space to keep compact */
 }
 

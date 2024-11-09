@@ -36,10 +36,11 @@
 }
 
 /* Footer Styling */
-.footer {
+footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: #373737;
-  color: white;
-  margin-top: 40px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 50px;
 }
