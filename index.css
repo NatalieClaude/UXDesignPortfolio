@@ -5,14 +5,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 
 body {
   font-family: "Open Sans", sans-serif; /* Apply the Open Sans font */
   line-height: 1.6;
-  background-color:  lightgrey;
-  color: #333;
+ 
   overscroll-behavior: none;
 }
 
@@ -107,18 +109,24 @@ header nav ul li a:hover {
 .work {
   padding: 50px;
   text-align: center;
+  background-color: rgb(221, 220, 220);
 }
 
-.work h2 {
-  font-size: 28px;
-  color: #555;
-  margin-bottom: 30px;
+.work h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 50px;
 }
+
+
 
 .work-gallery {
-  display: flex;
+   display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 40px; /* Adjust space between items as needed */
   justify-content: center;
-  gap: 40px; /* Space between the project images */
+  max-width: 800px; /* Set a maximum width for centering */
+  margin: 0 auto; /* Center the grid within the container */
 }
 
 /* Work Item Styling */
@@ -128,7 +136,15 @@ header nav ul li a:hover {
   height: 300px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  border-radius: 2px;
+  border-radius: 8px;
+}
+
+.cybersmarties {
+background-color: rgba(102, 205, 170, 0.6); /* 0.5 is 50% transparency */
+
+}
+.compliance {
+  background-color: rgba(19, 181, 234, 0.6); /* 0.5 is 50% transparency */;
 }
 
 /* Scale the entire work-item on hover */
@@ -180,6 +196,16 @@ header nav ul li a:hover {
   opacity: 1; /* Make the text visible on hover */
 }
 
+.non-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+
 /* Footer Styling */
 footer {
   text-align: center;
@@ -187,9 +213,27 @@ footer {
   background-color: #373737;
   color: #fff;
   font-size: 14px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 footer p {
   margin: 5px 0;
+}
+
+/* Fade-In Effect on Page Load */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade-Out Effect on Link Click */
+.fade-out-active {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }

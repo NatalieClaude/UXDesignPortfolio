@@ -49,7 +49,7 @@
 
 .contact-wrapper input:focus,
 .contact-wrapper textarea:focus {
-  border-color: #605dec;
+  border-color: #3e3e3e;
   outline: none;
 }
 

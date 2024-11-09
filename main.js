@@ -1,15 +1,15 @@
 // Load header.html dynamically
 document.addEventListener("DOMContentLoaded", () => {
   fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       document.getElementById("header-placeholder").innerHTML = data;
     })
-    .catch(error => console.error("Error loading header:", error));
+    .catch((error) => console.error("Error loading header:", error));
 });
 
 // Optional: Page transition effect
-document.querySelectorAll("a").forEach(link => {
+document.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", function (e) {
     if (link.href.includes(window.location.origin)) {
       e.preventDefault();
