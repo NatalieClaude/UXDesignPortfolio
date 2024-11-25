@@ -1,5 +1,15 @@
 /* Container Styling */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+
+
 .about-container {
+  flex: 1;
   padding: 50px;
   max-width: 800px;
   margin: 0 auto;

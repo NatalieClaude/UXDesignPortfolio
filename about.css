@@ -35,6 +35,10 @@
   margin-bottom: 10px;
 }
 
+.subsection-title {
+  margin-bottom: 10px;
+}
+
 /* Footer Styling */
 footer {
   text-align: center;
@@ -44,3 +48,4 @@ footer {
   font-size: 14px;
   margin-top: 50px;
 }
+

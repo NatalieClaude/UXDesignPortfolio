@@ -1,0 +1,25 @@
+.footer {
+  background-color: #333; /* Dark gray background */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Adds space inside the footer */
+  text-align: center; /* Centers all content */
+  font-size: 14px;
+}
+
+.footer-contact {
+  margin-top: 5px; /* Adds space between the copyright and contact */
+}
+
+.footer a {
+  color: #4dabf7; /* Light blue links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Adds hover effect */
+}
+
+.footer p {
+  margin: 0; /* Removes default paragraph margins */
+}

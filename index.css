@@ -9,17 +9,14 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 body {
   font-family: "Open Sans", sans-serif; /* Apply the Open Sans font */
   line-height: 1.6;
- 
+
   overscroll-behavior: none;
 }
 
-
- /* Header Styling   */
+/* Header Styling   */
 header {
   display: flex;
   justify-content: space-between;
@@ -54,26 +51,22 @@ header nav ul li a:hover {
   color: grey; /* Purple hover effect */
 }
 
-
-
 /* Main Section Styling */
 .intro {
   padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fafafa;
+  background-color: white;
 }
-
-
-
 
 .content-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Spreads the image and text evenly */
   align-items: center;
-  max-width: 1200px;
-  width: 100%;
+  max-width: 800px; /* Matches the width of the work-gallery */
+  margin: 0 auto; /* Centers the content */
+  gap: 40px; /* Adds spacing between the image and text */
 }
 
 /* Image Styling */
@@ -84,10 +77,14 @@ header nav ul li a:hover {
   object-fit: cover;
   object-position: center top; /* Shift the image down within the circle */
   margin-right: 40px; /* Space between image and text */
-  border: 2px solid lightgrey;
+  flex-shrink: 0; /* Prevents the image from resizing */
 }
 
 /* Text Styling */
+.text {
+  flex: 1; /* Ensures the text takes up the remaining space */
+}
+
 .text h1 {
   font-size: 36px;
   color: #333;
@@ -100,6 +97,12 @@ header nav ul li a:hover {
   max-width: 600px; /* Keeps the text width balanced */
 }
 
+
+
+.contact-intro {
+  margin-top: 20px; /* Adds space above "Feel free to reach out" */
+}
+
 .text .highlight {
   font-size: 20px;
   color: #555; /* Purple highlight for subtext */
@@ -109,47 +112,62 @@ header nav ul li a:hover {
 .work {
   padding: 50px;
   text-align: center;
-  background-color: rgb(221, 220, 220);
+  background-color: white;
 }
 
 .work h1 {
   font-size: 36px;
   color: #333;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-
+.margin-top {
+  margin-top: 50px;
+}
 
 .work-gallery {
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 40px; /* Adjust space between items as needed */
+  gap: 60px; /* Consistent spacing between items */
   justify-content: center;
-  max-width: 800px; /* Set a maximum width for centering */
-  margin: 0 auto; /* Center the grid within the container */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Work Item Styling */
 .work-item {
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 400px; /* Static width */
+  height: 300px; /* Static height */
   overflow: hidden;
   transition: transform 0.3s ease;
+  background-color: white; /* Ensure contrast with the shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Darker, more diffused shadow */
+  /* border-radius: 8px; */
+  display: flex; /* Centers content within */
+  align-items: center;
+  justify-content: center;
+}
+
+.work-item {
+  transform-origin: center; /* Ensures scaling is centered */
+}
+
+/* Show Content on Hover */
+.work-item:hover .hover-content {
+  opacity: 1; /* Make it visible */
+  transform: translate(-50%, -40%); /* Slight upward shift for alignment */
+}
+
+.border {
+  border: 10px solid lightgray;
   border-radius: 8px;
-}
-
-.cybersmarties {
-background-color: rgba(102, 205, 170, 0.6); /* 0.5 is 50% transparency */
-
-}
-.compliance {
-  background-color: rgba(19, 181, 234, 0.6); /* 0.5 is 50% transparency */;
 }
 
 /* Scale the entire work-item on hover */
 .work-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Ensures proportional hover scaling */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
 }
 
 /* Image Styling */
@@ -173,17 +191,17 @@ background-color: rgba(102, 205, 170, 0.6); /* 0.5 is 50% transparency */
 
 /* On hover, apply a 40% black overlay */
 .work-item:hover::before {
-  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  background-color: rgba(0, 0, 0, 0.8); /* Black overlay with 60% opacity */
 }
 
 /* Hover Text Styling */
-.hover-text {
+.hover-title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the text */
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   opacity: 0; /* Initially hidden */
   transition: opacity 0.3s ease; /* Smooth fade-in effect */
@@ -191,33 +209,29 @@ background-color: rgba(102, 205, 170, 0.6); /* 0.5 is 50% transparency */
   pointer-events: none; /* Make sure the text doesn't interfere with hover */
 }
 
+.hover-title p {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.hover-paragraph {
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  margin-top: 20px; /* Adds spacing above the placeholder text */
+  text-align: center; /* Centers the text */
+  width: auto; /* Removes any fixed width */
+}
+
 /* Show the text when hovering over the work-item */
-.work-item:hover .hover-text {
+.work-item:hover .hover-title {
   opacity: 1; /* Make the text visible on hover */
 }
 
-.non-hover-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text */
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-/* Footer Styling */
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #373737;
-  color: #fff;
-  font-size: 14px;
-  /* margin-top: 50px; */
-}
-
-footer p {
-  margin: 5px 0;
+.work-item img.special-image {
+  object-fit: contain; /* Keeps the entire image visible */
+  background-color: white; /* Adds a background color for negative space */
+  padding: 30px; /* Optional: Adds spacing to balance appearance */
 }
 
 /* Fade-In Effect on Page Load */
@@ -236,4 +250,14 @@ footer p {
 .fade-out-active {
   opacity: 0;
   transition: opacity 0.5s ease;
+}
+
+
+.contact-link {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: grey;
 }

@@ -293,6 +293,10 @@ figcaption {
   margin: 0 auto; /* Centers images horizontally */
 }
 
+.small-image {
+  width: 200px;
+}
+
 /* Spacing for paragraphs */
 .spaced-paragraph {
   margin-bottom: var(
