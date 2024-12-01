@@ -26,3 +26,5 @@ document.querySelectorAll("a").forEach((link) => {
   fetch('footer.html')
     .then(response => response.text())
     .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+
+const onDisabledClick = (e) => console.log(e)

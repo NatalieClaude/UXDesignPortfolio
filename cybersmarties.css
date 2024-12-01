@@ -1,50 +1,49 @@
+@import url(project-page.css);
 
-/* Ensure the body takes full height */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
-  margin: 0;
+/* 
+  CSS Variables: 
+  These variables define common colors and spacing values for consistency.
+*/
+#stay {
+  --primary-color: #009FD6; /* Main accent color: used for page title and section titles */
+  --subheading-color: #3f3d56; /* Subheading color: used for subheadings */
+  --text-color: #555; /* Default text color */
+  --heading-color: #333; /* Main heading text color */
+  --bg-color: #ffffff; /* Background color */
+  --primary-color-transparent-50: rgba(96, 93, 236, 0.5); /* 50% transparent */
+  --space-extralarge: 80px;
+  --space-large: 50px; /* Large spacing for sections */
+  --space-medium: 30px; /* Medium spacing for related elements */
+  --space-small: 20px; /* Small spacing for close elements */
+  --space-micro: 10px; /* Minimal spacing for micro adjustments */
+  --p-fontsize: 1.1em;
+  --caption-fontsize: 1em;
 }
 
-
-/* Container Styling */
-.about-container {
-  flex: 1;
-  padding: 50px;
-  max-width: 800px;
-  margin: 0 auto;
-
+.intro-image {
+  max-width: 300px;
 }
 
-/* Page Title Styling */
-.about-container h1 {
-  font-size: 36px;
-  color: #506F94;
-  text-align: left;
-  margin-bottom: 20px;
+.approach-list {
+  padding-inline-start: 40px;
 }
 
-/* Paragraph Styling */
-.about-container p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.8;
-  margin-bottom: 20px;
+.spaced-paragraph {
+  margin-bottom: var(--space-medium);
 }
 
-/* Highlight Text */
-.highlight {
-  font-weight: bold;
-  color: black;
+.spaced-content h3 {
+  margin-bottom: var(--space-micro);
 }
 
-/* Section Title Styling */
-.section-title {
-  font-size: 28px;
-  
-  margin-bottom: 10px;
+.case-study-title {
+  @media (max-width:576px) {
+    font-size: 2.4em;
+  }
 }
+.case-study-subtitle {
+  @media (max-width:576px) {
+    font-size: 1.4em;
+  }
 
-
-
+}
